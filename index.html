@@ -142,11 +142,21 @@
         }
 
         .business-card {
-            padding: 35px 25px;
-            border: 1px solid #292929;
-            background: #111111;
-            transition: 0.3s;
-        }
+    padding: 40px 30px;
+    border: 1px solid #292929;
+    background: linear-gradient(145deg, #151515, #0f0f0f);
+    transition: 0.35s ease;
+    min-height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.business-card:hover {
+    transform: translateY(-8px);
+    border-color: #d4af37;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
 
         .business-card:hover {
             transform: translateY(-6px);
