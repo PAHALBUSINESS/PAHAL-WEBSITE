@@ -91,6 +91,38 @@ nav a:hover {
     display: block;
     margin: 0 auto;
 }
+        .lighting-categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.category-card {
+    padding: 35px;
+    background: linear-gradient(145deg, #151515, #0d0d0d);
+    border: 1px solid #292929;
+    transition: 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+    border-color: #d4af37;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.category-card h3 {
+    margin: 0 0 15px;
+    color: #d4af37;
+    font-size: 28px;
+}
+
+.category-card p {
+    margin: 0;
+    color: #bdbdbd;
+    font-size: 17px;
+    line-height: 1.6;
+}
 </style>
     
 </head>
