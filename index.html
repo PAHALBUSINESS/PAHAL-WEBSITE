@@ -350,12 +350,21 @@ z-index: 2;
         padding: 75px 6%;
     }
 
-    .business-grid {
-        display: grid;
-        grid-template-columns: 1fr !important;
-        width: 100%;
-        gap: 20px;
-    }
+   .business-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100%;
+    max-width: 100%;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.business-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
 
     .business-card {
         width: 100%;
