@@ -175,6 +175,86 @@ nav a:hover {
     font-size: 17px;
     line-height: 1.6;
 }
+        /* FINAL MOBILE FIX - LIGHTING PAGE */
+@media (max-width: 600px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .business-info {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .business-info > p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    /* 4 information boxes -> 1 column */
+    .business-details {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 18px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .info-box {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        padding: 22px;
+    }
+
+    .info-box h3 {
+        font-size: 19px;
+    }
+
+    .info-box p {
+        font-size: 15px;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    /* Lighting categories -> 1 column */
+    .lighting-categories {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+        margin-top: 35px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .category-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        padding: 25px;
+    }
+
+    .category-card h3 {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+
+    .category-card p {
+        font-size: 16px;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+    }
+}
 </style>
     
 </head>
