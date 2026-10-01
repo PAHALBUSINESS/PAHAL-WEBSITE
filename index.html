@@ -278,55 +278,39 @@ z-index: 2;
 
         /* MOBILE */
 
-   @media (max-width: 600px) {
+/* FINAL RESPONSIVE MOBILE FIX */
+@media screen and (max-width: 600px) {
 
-    header {
-        padding: 20px 6%;
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        min-width: 0;
     }
-
-    nav a {
-        margin-left: 12px;
-        font-size: 12px;
-    }
-
-    .hero {
-        min-height: 80vh;
-        padding: 70px 6%;
-    }
-
-    .hero h1 {
-        letter-spacing: 8px;
-    }
-
-    section {
-        padding: 75px 6%;
-    }
-
-    .business-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .section-title {
-        font-size: 34px;
-    }
-}
-        /* FINAL MOBILE FIX */
-@media (max-width: 600px) {
 
     html,
     body {
         width: 100%;
         max-width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    body {
         overflow-x: hidden;
     }
 
     header {
         width: 100%;
-        box-sizing: border-box;
+        max-width: 100%;
         padding: 20px 6%;
+        box-sizing: border-box;
     }
 
     nav {
+        width: 100%;
+        max-width: 100%;
         display: flex;
         flex-wrap: wrap;
         gap: 14px;
@@ -335,49 +319,84 @@ z-index: 2;
     nav a {
         margin-left: 0;
         font-size: 12px;
+        white-space: normal;
     }
 
     .hero {
         width: 100%;
+        max-width: 100%;
         min-height: auto;
         padding: 70px 6%;
         box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .hero h1 {
+        letter-spacing: 8px;
+        max-width: 100%;
     }
 
     section {
         width: 100%;
-        box-sizing: border-box;
+        max-width: 100%;
         padding: 75px 6%;
+        box-sizing: border-box;
+        overflow: hidden;
     }
 
-   .business-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) !important;
-    width: 100%;
-    max-width: 100%;
-    gap: 20px;
-    box-sizing: border-box;
-}
-
-.business-card {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
-}
-
-    .business-card {
-        width: 100%;
+    /* ALL GRID SECTIONS = ONE CARD PER ROW */
+    .business-grid,
+    .contact-grid,
+    .lighting-grid,
+    .product-grid,
+    .cards-grid {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 20px;
         box-sizing: border-box;
+    }
+
+    /* Catch any other grid used inside sections */
+    section [class*="grid"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        box-sizing: border-box;
+    }
+
+    .business-card,
+    .contact-card,
+    .lighting-card,
+    .product-card,
+    .card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box;
+    }
+
+    /* Prevent long emails / links / phone numbers from breaking layout */
+    a,
+    p,
+    span,
+    div {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
     }
 
     .section-title {
         font-size: 34px;
+        max-width: 100%;
     }
 }
-        </style>
-    <!-- HEADER -->
-
     <header>
 
         <div class="logo">
