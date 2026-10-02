@@ -227,9 +227,10 @@ nav a:hover {
     }
 
     /* Lighting categories -> 1 column */
-    .lighting-categories {
+ /* Mobile Lighting Categories */
+.lighting-categories {
     display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-columns: 1fr !important;
     gap: 20px;
     margin-top: 35px;
     width: 100%;
@@ -237,24 +238,23 @@ nav a:hover {
     box-sizing: border-box;
 }
 
-    .category-card {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        box-sizing: border-box;
-        padding: 25px;
-    }
+.category-card {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 28px 24px;
+    background: linear-gradient(145deg, #151515, #0d0d0d);
+    border: 1px solid #292929;
+    color: #ffffff;
+    text-decoration: none !important;
+}
 
-    .category-card h3 {
-        font-size: 24px;
-        line-height: 1.2;
-    }
+.category-card h3 {
+    color: #d4af37;
+}
 
-    .category-card p {
-        font-size: 16px;
-        line-height: 1.6;
-        overflow-wrap: anywhere;
-    }
+.category-card p {
+    color: #ffffff;
 }
         /* LIGHTING HERO MOBILE FIX */
 @media (max-width: 600px) {
