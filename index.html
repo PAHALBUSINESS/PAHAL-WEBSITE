@@ -184,7 +184,49 @@ z-index: 2;
     line-height: 1.6;
     margin: 0;
 }
+.vision-main {
+    max-width: 850px;
+    margin-bottom: 45px;
+}
 
+.vision-main p {
+    color: #bdbdbd;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.vision-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.vision-card {
+    padding: 30px;
+    background: #101010;
+    border: 1px solid #292929;
+    border-top: 2px solid #d4af37;
+    transition: 0.3s ease;
+}
+
+.vision-card:hover {
+    transform: translateY(-6px);
+    border-color: #d4af37;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.vision-card h3 {
+    color: #d4af37;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.vision-card p {
+    color: #bdbdbd;
+    font-size: 15px;
+    line-height: 1.6;
+}
         /* BUSINESSES */
 
         .business-grid {
