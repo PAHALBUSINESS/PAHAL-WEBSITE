@@ -476,103 +476,120 @@
         }
 
 
-        /* =========================================================
-           ABOUT
-        ========================================================= */
+    <!-- =========================================================
+     ABOUT
+========================================================= -->
 
-        #about {
-            background:
-                radial-gradient(
-                    circle at 85% 20%,
-                    rgba(212,175,55,0.035),
-                    transparent 28%
-                ),
-                #080808;
-        }
+<section id="about">
 
-        .about-highlights {
-            display: grid;
+    <h2 class="section-title">
+        About PAHAL
+    </h2>
 
-            grid-template-columns:
-                repeat(3, minmax(0, 1fr));
+    <div class="section-line"></div>
 
-            gap: 22px;
+    <div class="about-content">
 
-            margin-top: 52px;
-        }
+        <p class="section-text">
+            PAHAL is a growing business group built with a long-term
+            vision to create, develop and expand businesses across
+            multiple industries.
+        </p>
 
-        .highlight-card {
-            position: relative;
+        <p class="section-text" style="margin-top:20px;">
+            We believe in starting with strong foundations,
+            understanding the market, creating real value for
+            customers and growing step by step.
+        </p>
 
-            padding: 32px;
+        <p class="section-text" style="margin-top:20px;">
+            From our existing businesses to future ventures,
+            every PAHAL business is part of a larger vision —
+            building a trusted brand, creating opportunities
+            and growing for the future.
+        </p>
 
-            min-height: 160px;
+    </div>
 
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(20,20,20,0.96),
-                    rgba(10,10,10,0.96)
-                );
+    <div class="about-highlights">
 
-            border: 1px solid #252525;
-            border-top: 2px solid var(--gold);
+        <!-- BUILD -->
 
-            transition:
-                transform 0.35s ease,
-                border-color 0.35s ease,
-                box-shadow 0.35s ease;
-        }
+        <div class="highlight-card">
 
-        .highlight-card::after {
-            content: "";
+            <div class="highlight-icon">
+                <img
+                    src="build-icon.png"
+                    alt="Build"
+                >
+            </div>
 
-            position: absolute;
-            inset: 0;
+            <div class="highlight-content">
 
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(212,175,55,0.06),
-                    transparent 35%
-                );
+                <h3>BUILD</h3>
 
-            pointer-events: none;
-        }
+                <p>
+                    Strong foundations.<br>
+                    Real businesses.
+                </p>
 
-        .highlight-card:hover {
-            transform: translateY(-6px);
+            </div>
 
-            border-color: rgba(212,175,55,0.65);
+        </div>
 
-            box-shadow:
-                0 18px 40px rgba(0,0,0,0.35),
-                0 0 25px rgba(212,175,55,0.045);
-        }
 
-        .highlight-card h3 {
-            position: relative;
-            z-index: 1;
+        <!-- GROW -->
 
-            color: var(--gold);
+        <div class="highlight-card">
 
-            font-size: 22px;
+            <div class="highlight-icon">
+                <img
+                    src="grow-icon.png"
+                    alt="Grow"
+                >
+            </div>
 
-            letter-spacing: 1px;
+            <div class="highlight-content">
 
-            margin-bottom: 12px;
-        }
+                <h3>GROW</h3>
 
-        .highlight-card p {
-            position: relative;
-            z-index: 1;
+                <p>
+                    Step-by-step growth<br>
+                    through experience.
+                </p>
 
-            color: #a8a8a8;
+            </div>
 
-            font-size: 15px;
-            line-height: 1.7;
-        }
+        </div>
 
+
+        <!-- EXPAND -->
+
+        <div class="highlight-card">
+
+            <div class="highlight-icon">
+                <img
+                    src="expand-icon.png"
+                    alt="Expand"
+                >
+            </div>
+
+            <div class="highlight-content">
+
+                <h3>EXPAND</h3>
+
+                <p>
+                    Building a larger PAHAL<br>
+                    ecosystem for the future.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
         /* =========================================================
            VISION
