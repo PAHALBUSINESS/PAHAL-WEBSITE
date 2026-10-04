@@ -563,16 +563,29 @@
         </div>
 
 
-        <!-- EXPAND -->
+    <!-- EXPAND -->
 
-        <div class="highlight-card">
+<div class="highlight-card">
 
-            <div class="highlight-icon">
-                <img
-                    src="expand-icon.png"
-                    alt="Expand"
-                >
-            </div>
+    <div class="highlight-icon">
+        <img
+            src="expand-icon.png"
+            alt="Expand"
+        >
+    </div>
+
+    <div class="highlight-content">
+
+        <h3>EXPAND</h3>
+
+        <p>
+            Building a larger PAHAL<br>
+            ecosystem across industries.
+        </p>
+
+    </div>
+
+</div>
 
             <div class="highlight-content">
 
@@ -591,6 +604,258 @@
     </div>
 
 </section>
+        /* =========================================================
+   PAHAL ABOUT - FINAL HIGHLIGHT CARDS
+========================================================= */
+
+#about .about-highlights {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 22px !important;
+    margin-top: 52px !important;
+    width: 100% !important;
+}
+
+
+/* CARD */
+
+#about .about-highlights .highlight-card {
+    position: relative !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+
+    box-sizing: border-box !important;
+
+    width: 100% !important;
+    min-height: 116px !important;
+
+    padding: 18px 20px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20,20,20,0.98),
+            rgba(10,10,10,0.98)
+        ) !important;
+
+    border: 1px solid rgba(212,175,55,0.55) !important;
+    border-top: 2px solid var(--gold) !important;
+
+    border-radius: 4px !important;
+
+    overflow: hidden !important;
+
+    box-sizing: border-box !important;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease !important;
+}
+
+
+/* GOLD CARD GLOW */
+
+#about .about-highlights .highlight-card::after {
+    content: "" !important;
+
+    position: absolute !important;
+    inset: 0 !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(212,175,55,0.07),
+            transparent 45%
+        ) !important;
+
+    pointer-events: none !important;
+}
+
+
+/* =========================================================
+   ICON CIRCLE
+========================================================= */
+
+#about .about-highlights .highlight-icon {
+    position: relative !important;
+    z-index: 2 !important;
+
+    flex: 0 0 76px !important;
+
+    width: 76px !important;
+    height: 76px !important;
+
+    min-width: 76px !important;
+
+    margin: 0 20px 0 0 !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 50% !important;
+
+    border: 1px solid rgba(212,175,55,0.45) !important;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(212,175,55,0.10),
+            rgba(5,5,5,0.95)
+        ) !important;
+
+    box-shadow:
+        0 0 18px rgba(212,175,55,0.08) !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* ICON IMAGE */
+
+#about .about-highlights .highlight-icon img {
+    display: block !important;
+
+    width: 48px !important;
+    height: 48px !important;
+
+    max-width: 48px !important;
+    max-height: 48px !important;
+
+    object-fit: contain !important;
+
+    margin: 0 !important;
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+#about .about-highlights .highlight-content {
+    position: relative !important;
+
+    z-index: 2 !important;
+
+    flex: 1 1 auto !important;
+
+    min-width: 0 !important;
+
+    padding: 0 !important;
+
+    margin: 0 !important;
+}
+
+
+#about .about-highlights .highlight-content h3 {
+    position: relative !important;
+
+    margin: 0 0 7px 0 !important;
+
+    padding: 0 !important;
+
+    color: var(--gold) !important;
+
+    font-size: 21px !important;
+
+    line-height: 1.2 !important;
+
+    font-weight: 700 !important;
+
+    letter-spacing: 1px !important;
+}
+
+
+#about .about-highlights .highlight-content p {
+    position: relative !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    color: #a8a8a8 !important;
+
+    font-size: 14px !important;
+
+    line-height: 1.45 !important;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+#about .about-highlights .highlight-card:hover {
+    transform: translateY(-5px) !important;
+
+    border-color:
+        rgba(212,175,55,0.85) !important;
+
+    box-shadow:
+        0 16px 35px rgba(0,0,0,0.35),
+        0 0 22px rgba(212,175,55,0.08) !important;
+}
+
+
+#about .about-highlights .highlight-card:hover .highlight-icon {
+    border-color:
+        rgba(212,175,55,0.8) !important;
+
+    box-shadow:
+        0 0 24px rgba(212,175,55,0.14) !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    #about .about-highlights {
+        grid-template-columns: 1fr !important;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    #about .about-highlights .highlight-card {
+        min-height: 100px !important;
+
+        padding: 16px !important;
+    }
+
+    #about .about-highlights .highlight-icon {
+        flex: 0 0 62px !important;
+
+        width: 62px !important;
+        height: 62px !important;
+
+        min-width: 62px !important;
+
+        margin-right: 16px !important;
+    }
+
+    #about .about-highlights .highlight-icon img {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    #about .about-highlights .highlight-content h3 {
+        font-size: 19px !important;
+    }
+
+    #about .about-highlights .highlight-content p {
+        font-size: 13px !important;
+    }
+
+}
 
         /* =========================================================
            VISION
