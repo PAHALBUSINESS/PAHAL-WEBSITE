@@ -477,165 +477,109 @@
 
 
 /* =========================================================
-   ABOUT SECTION — FINAL
-========================================================= */
-
-#about {
-    background:
-        radial-gradient(
-            circle at 85% 20%,
-            rgba(212,175,55,0.035),
-            transparent 28%
-        ),
-        #080808;
-}
-
-#about .about-content {
-    max-width: 1150px;
-}
-
-#about .section-text {
-    color: #b8b8b8;
-    font-size: 20px;
-    line-height: 1.8;
-}
-
-
-/* =========================================================
-   ABOUT HIGHLIGHTS — 3 CARDS IN ONE ROW
+   ABOUT — FINAL OVERRIDE FIX
 ========================================================= */
 
 #about .about-highlights {
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     gap: 26px !important;
+    width: 100% !important;
     margin-top: 55px !important;
-    width: 100%;
 }
 
-
-/* =========================================================
-   CARD
-========================================================= */
-
-#about .highlight-card {
-    position: relative;
-
+#about .about-highlights .highlight-card {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
+    position: relative !important;
 
     min-height: 112px !important;
     height: auto !important;
 
     padding: 18px 24px !important;
+    box-sizing: border-box !important;
 
-    box-sizing: border-box;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(20,20,20,0.98),
-            rgba(10,10,10,0.98)
-        );
-
-    border: 1px solid rgba(212,175,55,0.55) !important;
-    border-top: 2px solid var(--gold) !important;
-    border-radius: 4px;
-
-    overflow: hidden;
-
-    transition:
-        transform 0.35s ease,
-        border-color 0.35s ease,
-        box-shadow 0.35s ease;
+    overflow: hidden !important;
 }
 
 
-/* Gold glow */
+/* ICON — FORCE VISIBLE */
 
-#about .highlight-card::after {
-    content: "";
+#about .about-highlights .highlight-card .highlight-icon {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 
-    position: absolute;
-    inset: 0;
+    position: relative !important;
+    z-index: 5 !important;
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(212,175,55,0.07),
-            transparent 45%
-        );
-
-    pointer-events: none;
-}
-
-
-/* =========================================================
-   ICON
-========================================================= */
-
-#about .highlight-icon {
-    position: relative;
-    z-index: 2;
+    flex: 0 0 74px !important;
 
     width: 74px !important;
     height: 74px !important;
     min-width: 74px !important;
+    min-height: 74px !important;
 
-    margin-right: 20px !important;
+    margin: 0 20px 0 0 !important;
 
-    border-radius: 50%;
+    align-items: center !important;
+    justify-content: center !important;
 
-    border: 1px solid rgba(212,175,55,0.45);
+    border-radius: 50% !important;
+    border: 1px solid rgba(212,175,55,0.45) !important;
 
     background:
         radial-gradient(
             circle,
             rgba(212,175,55,0.10),
             rgba(5,5,5,0.95)
-        );
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+        ) !important;
 
     box-shadow:
-        0 0 18px rgba(212,175,55,0.08);
+        0 0 18px rgba(212,175,55,0.08) !important;
 }
 
 
-#about .highlight-icon img {
+/* ICON IMAGE — FORCE VISIBLE */
+
+#about .about-highlights .highlight-card .highlight-icon img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
     width: 48px !important;
     height: 48px !important;
 
     max-width: 48px !important;
     max-height: 48px !important;
 
-    object-fit: contain;
-
-    display: block !important;
+    object-fit: contain !important;
 }
 
 
-/* =========================================================
-   CONTENT
-========================================================= */
+/* CONTENT */
 
-#about .highlight-content {
-    position: relative;
-    z-index: 2;
+#about .about-highlights .highlight-card .highlight-content {
+    display: block !important;
 
-    flex: 1;
+    position: relative !important;
+    z-index: 5 !important;
 
-    min-width: 0;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
 
     padding: 0 !important;
 }
 
 
-#about .highlight-card h3 {
+/* HEADING — FORCE NEW LINE */
+
+#about .about-highlights .highlight-card .highlight-content h3 {
+    display: block !important;
+
     margin: 0 0 7px 0 !important;
+    padding: 0 !important;
 
     color: var(--gold) !important;
 
@@ -643,48 +587,26 @@
     font-weight: 700 !important;
 
     line-height: 1.2 !important;
-
-    letter-spacing: 1px;
+    letter-spacing: 1px !important;
 }
 
 
-#about .highlight-card p {
+/* DESCRIPTION — FORCE BELOW HEADING */
+
+#about .about-highlights .highlight-card .highlight-content p {
+    display: block !important;
+
     margin: 0 !important;
+    padding: 0 !important;
 
     color: #a8a8a8 !important;
 
     font-size: 14px !important;
-
     line-height: 1.45 !important;
 }
 
 
-/* =========================================================
-   HOVER
-========================================================= */
-
-#about .highlight-card:hover {
-    transform: translateY(-5px);
-
-    border-color: rgba(212,175,55,0.85) !important;
-
-    box-shadow:
-        0 16px 35px rgba(0,0,0,0.35),
-        0 0 22px rgba(212,175,55,0.08);
-}
-
-
-#about .highlight-card:hover .highlight-icon {
-    border-color: rgba(212,175,55,0.8);
-
-    box-shadow:
-        0 0 24px rgba(212,175,55,0.14);
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
+/* MOBILE */
 
 @media (max-width: 900px) {
 
@@ -692,46 +614,27 @@
         grid-template-columns: 1fr !important;
     }
 
-    #about .highlight-card {
-        min-height: 105px !important;
-    }
-
 }
 
 
-/* =========================================================
-   MOBILE
-========================================================= */
-
 @media (max-width: 600px) {
 
-    #about .section-text {
-        font-size: 17px;
-        line-height: 1.7;
-    }
-
-    #about .highlight-card {
+    #about .about-highlights .highlight-card {
         padding: 18px !important;
     }
 
-    #about .highlight-icon {
+    #about .about-highlights .highlight-card .highlight-icon {
+        flex-basis: 62px !important;
         width: 62px !important;
         height: 62px !important;
         min-width: 62px !important;
+        min-height: 62px !important;
         margin-right: 16px !important;
     }
 
-    #about .highlight-icon img {
+    #about .about-highlights .highlight-card .highlight-icon img {
         width: 40px !important;
         height: 40px !important;
-    }
-
-    #about .highlight-card h3 {
-        font-size: 19px !important;
-    }
-
-    #about .highlight-card p {
-        font-size: 13px !important;
     }
 
 }
