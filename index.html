@@ -476,306 +476,180 @@
         }
 
 
-<!-- =========================================================
-     ABOUT
-========================================================= -->
+/* =========================================================
+   ABOUT SECTION — FINAL
+========================================================= */
 
-<section id="about">
+#about {
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(212,175,55,0.035),
+            transparent 28%
+        ),
+        #080808;
+}
 
-    <h2 class="section-title">
-        About PAHAL
-    </h2>
+#about .about-content {
+    max-width: 1150px;
+}
 
-    <div class="section-line"></div>
-
-
-    <p class="section-text">
-        PAHAL is a growing business group built with a long-term vision to create,
-        develop and expand businesses across multiple industries.
-    </p>
-
-
-    <p class="section-text" style="margin-top:20px;">
-        We believe in starting with strong foundations, understanding the market,
-        creating real value for customers and growing step by step.
-    </p>
-
-
-    <p class="section-text" style="margin-top:20px;">
-        From our existing businesses to future ventures, every PAHAL business is
-        part of a larger vision — building a trusted brand, creating opportunities
-        and growing for the future.
-    </p>
+#about .section-text {
+    color: #b8b8b8;
+    font-size: 20px;
+    line-height: 1.8;
+}
 
 
-    <!-- ABOUT HIGHLIGHTS -->
-
-    <div class="about-highlights">
-
-
-        <!-- BUILD -->
-
-        <div class="highlight-card">
-
-            <div class="highlight-icon">
-                <img
-                    src="build-icon.png"
-                    alt="Build"
-                >
-            </div>
-
-            <div class="highlight-content">
-
-                <h3>BUILD</h3>
-
-                <p>
-                    Strong foundations.<br>
-                    Real businesses.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- GROW -->
-
-        <div class="highlight-card">
-
-            <div class="highlight-icon">
-                <img
-                    src="grow-icon.png"
-                    alt="Grow"
-                >
-            </div>
-
-            <div class="highlight-content">
-
-                <h3>GROW</h3>
-
-                <p>
-                    Step-by-step growth through<br>
-                    experience and reinvestment.
-                </p>
-
-            </div>
-
-        </div>
-
-
-    <!-- EXPAND -->
-
-<div class="highlight-card">
-
-    <div class="highlight-icon">
-        <img
-            src="expand-icon.png"
-            alt="Expand"
-        >
-    </div>
-
-    <div class="highlight-content">
-
-        <h3>EXPAND</h3>
-
-        <p>
-            Building a larger PAHAL<br>
-            ecosystem across industries.
-        </p>
-
-    </div>
-
-</div>
-
-            <div class="highlight-content">
-
-                <h3>EXPAND</h3>
-
-                <p>
-                    Building a larger PAHAL<br>
-                    ecosystem across industries.
-                </p>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-        /* =========================================================
-   PAHAL ABOUT - FINAL HIGHLIGHT CARDS
+/* =========================================================
+   ABOUT HIGHLIGHTS — 3 CARDS IN ONE ROW
 ========================================================= */
 
 #about .about-highlights {
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 22px !important;
-    margin-top: 52px !important;
-    width: 100% !important;
+    gap: 26px !important;
+    margin-top: 55px !important;
+    width: 100%;
 }
 
 
-/* CARD */
+/* =========================================================
+   CARD
+========================================================= */
 
-#about .about-highlights .highlight-card {
-    position: relative !important;
+#about .highlight-card {
+    position: relative;
 
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
 
-    box-sizing: border-box !important;
+    min-height: 112px !important;
+    height: auto !important;
 
-    width: 100% !important;
-    min-height: 116px !important;
+    padding: 18px 24px !important;
 
-    padding: 18px 20px !important;
+    box-sizing: border-box;
 
     background:
         linear-gradient(
             145deg,
             rgba(20,20,20,0.98),
             rgba(10,10,10,0.98)
-        ) !important;
+        );
 
     border: 1px solid rgba(212,175,55,0.55) !important;
     border-top: 2px solid var(--gold) !important;
+    border-radius: 4px;
 
-    border-radius: 4px !important;
-
-    overflow: hidden !important;
-
-    box-sizing: border-box !important;
+    overflow: hidden;
 
     transition:
         transform 0.35s ease,
         border-color 0.35s ease,
-        box-shadow 0.35s ease !important;
+        box-shadow 0.35s ease;
 }
 
 
-/* GOLD CARD GLOW */
+/* Gold glow */
 
-#about .about-highlights .highlight-card::after {
-    content: "" !important;
+#about .highlight-card::after {
+    content: "";
 
-    position: absolute !important;
-    inset: 0 !important;
+    position: absolute;
+    inset: 0;
 
     background:
         linear-gradient(
             135deg,
             rgba(212,175,55,0.07),
             transparent 45%
-        ) !important;
+        );
 
-    pointer-events: none !important;
+    pointer-events: none;
 }
 
 
 /* =========================================================
-   ICON CIRCLE
+   ICON
 ========================================================= */
 
-#about .about-highlights .highlight-icon {
-    position: relative !important;
-    z-index: 2 !important;
+#about .highlight-icon {
+    position: relative;
+    z-index: 2;
 
-    flex: 0 0 76px !important;
+    width: 74px !important;
+    height: 74px !important;
+    min-width: 74px !important;
 
-    width: 76px !important;
-    height: 76px !important;
+    margin-right: 20px !important;
 
-    min-width: 76px !important;
+    border-radius: 50%;
 
-    margin: 0 20px 0 0 !important;
-
-    display: flex !important;
-
-    align-items: center !important;
-    justify-content: center !important;
-
-    border-radius: 50% !important;
-
-    border: 1px solid rgba(212,175,55,0.45) !important;
+    border: 1px solid rgba(212,175,55,0.45);
 
     background:
         radial-gradient(
             circle,
             rgba(212,175,55,0.10),
             rgba(5,5,5,0.95)
-        ) !important;
+        );
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 
     box-shadow:
-        0 0 18px rgba(212,175,55,0.08) !important;
-
-    box-sizing: border-box !important;
+        0 0 18px rgba(212,175,55,0.08);
 }
 
 
-/* ICON IMAGE */
-
-#about .about-highlights .highlight-icon img {
-    display: block !important;
-
+#about .highlight-icon img {
     width: 48px !important;
     height: 48px !important;
 
     max-width: 48px !important;
     max-height: 48px !important;
 
-    object-fit: contain !important;
+    object-fit: contain;
 
-    margin: 0 !important;
+    display: block !important;
 }
 
 
 /* =========================================================
-   TEXT
+   CONTENT
 ========================================================= */
 
-#about .about-highlights .highlight-content {
-    position: relative !important;
+#about .highlight-content {
+    position: relative;
+    z-index: 2;
 
-    z-index: 2 !important;
+    flex: 1;
 
-    flex: 1 1 auto !important;
-
-    min-width: 0 !important;
+    min-width: 0;
 
     padding: 0 !important;
-
-    margin: 0 !important;
 }
 
 
-#about .about-highlights .highlight-content h3 {
-    position: relative !important;
-
+#about .highlight-card h3 {
     margin: 0 0 7px 0 !important;
-
-    padding: 0 !important;
 
     color: var(--gold) !important;
 
     font-size: 21px !important;
+    font-weight: 700 !important;
 
     line-height: 1.2 !important;
 
-    font-weight: 700 !important;
-
-    letter-spacing: 1px !important;
+    letter-spacing: 1px;
 }
 
 
-#about .about-highlights .highlight-content p {
-    position: relative !important;
-
+#about .highlight-card p {
     margin: 0 !important;
-
-    padding: 0 !important;
 
     color: #a8a8a8 !important;
 
@@ -789,29 +663,27 @@
    HOVER
 ========================================================= */
 
-#about .about-highlights .highlight-card:hover {
-    transform: translateY(-5px) !important;
+#about .highlight-card:hover {
+    transform: translateY(-5px);
 
-    border-color:
-        rgba(212,175,55,0.85) !important;
+    border-color: rgba(212,175,55,0.85) !important;
 
     box-shadow:
         0 16px 35px rgba(0,0,0,0.35),
-        0 0 22px rgba(212,175,55,0.08) !important;
+        0 0 22px rgba(212,175,55,0.08);
 }
 
 
-#about .about-highlights .highlight-card:hover .highlight-icon {
-    border-color:
-        rgba(212,175,55,0.8) !important;
+#about .highlight-card:hover .highlight-icon {
+    border-color: rgba(212,175,55,0.8);
 
     box-shadow:
-        0 0 24px rgba(212,175,55,0.14) !important;
+        0 0 24px rgba(212,175,55,0.14);
 }
 
 
 /* =========================================================
-   RESPONSIVE
+   TABLET
 ========================================================= */
 
 @media (max-width: 900px) {
@@ -820,38 +692,45 @@
         grid-template-columns: 1fr !important;
     }
 
+    #about .highlight-card {
+        min-height: 105px !important;
+    }
+
 }
 
 
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media (max-width: 600px) {
 
-    #about .about-highlights .highlight-card {
-        min-height: 100px !important;
-
-        padding: 16px !important;
+    #about .section-text {
+        font-size: 17px;
+        line-height: 1.7;
     }
 
-    #about .about-highlights .highlight-icon {
-        flex: 0 0 62px !important;
+    #about .highlight-card {
+        padding: 18px !important;
+    }
 
+    #about .highlight-icon {
         width: 62px !important;
         height: 62px !important;
-
         min-width: 62px !important;
-
         margin-right: 16px !important;
     }
 
-    #about .about-highlights .highlight-icon img {
+    #about .highlight-icon img {
         width: 40px !important;
         height: 40px !important;
     }
 
-    #about .about-highlights .highlight-content h3 {
+    #about .highlight-card h3 {
         font-size: 19px !important;
     }
 
-    #about .about-highlights .highlight-content p {
+    #about .highlight-card p {
         font-size: 13px !important;
     }
 
