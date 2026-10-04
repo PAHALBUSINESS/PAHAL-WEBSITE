@@ -476,263 +476,121 @@
         }
 
 
- /* =========================================================
-   ABOUT SECTION
-========================================================= */
+<!-- =========================================================
+     ABOUT
+========================================================= -->
 
-#about {
-    background:
-        radial-gradient(
-            circle at 85% 20%,
-            rgba(212,175,55,0.035),
-            transparent 28%
-        ),
-        #080808;
-}
+<section id="about">
 
-/* About text */
+    <h2 class="section-title">
+        About PAHAL
+    </h2>
 
-.about-content {
-    max-width: 1150px;
-}
+    <div class="section-line"></div>
 
-#about .section-text {
-    color: #b8b8b8;
-    font-size: 20px;
-    line-height: 1.8;
-}
 
+    <p class="section-text">
+        PAHAL is a growing business group built with a long-term vision to create,
+        develop and expand businesses across multiple industries.
+    </p>
 
-/* =========================================================
-   ABOUT HIGHLIGHTS
-========================================================= */
 
-.about-highlights {
-    display: grid;
+    <p class="section-text" style="margin-top:20px;">
+        We believe in starting with strong foundations, understanding the market,
+        creating real value for customers and growing step by step.
+    </p>
 
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
 
-    gap: 18px;
+    <p class="section-text" style="margin-top:20px;">
+        From our existing businesses to future ventures, every PAHAL business is
+        part of a larger vision — building a trusted brand, creating opportunities
+        and growing for the future.
+    </p>
 
-    margin-top: 55px;
-}
 
+    <!-- ABOUT HIGHLIGHTS -->
 
-/* =========================================================
-   HIGHLIGHT CARD
-========================================================= */
+    <div class="about-highlights">
 
-.highlight-card {
-    position: relative;
 
-    display: flex;
-    align-items: center;
+        <!-- BUILD -->
 
-    min-height: 112px;
+        <div class="highlight-card">
 
-    padding: 0 24px;
+            <div class="highlight-icon">
+                <img
+                    src="build-icon.png"
+                    alt="Build"
+                >
+            </div>
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(20,20,20,0.98),
-            rgba(10,10,10,0.98)
-        );
+            <div class="highlight-content">
 
-    border: 1px solid rgba(212,175,55,0.55);
+                <h3>BUILD</h3>
 
-    border-top: 2px solid var(--gold);
+                <p>
+                    Strong foundations.<br>
+                    Real businesses.
+                </p>
 
-    border-radius: 4px;
+            </div>
 
-    overflow: hidden;
+        </div>
 
-    transition:
-        transform 0.35s ease,
-        border-color 0.35s ease,
-        box-shadow 0.35s ease;
-}
 
+        <!-- GROW -->
 
-/* Gold glow inside card */
+        <div class="highlight-card">
 
-.highlight-card::after {
-    content: "";
+            <div class="highlight-icon">
+                <img
+                    src="grow-icon.png"
+                    alt="Grow"
+                >
+            </div>
 
-    position: absolute;
+            <div class="highlight-content">
 
-    inset: 0;
+                <h3>GROW</h3>
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(212,175,55,0.07),
-            transparent 45%
-        );
+                <p>
+                    Step-by-step growth through<br>
+                    experience and reinvestment.
+                </p>
 
-    pointer-events: none;
-}
+            </div>
 
+        </div>
 
-/* =========================================================
-   ICON
-========================================================= */
 
-.highlight-icon {
-    position: relative;
+        <!-- EXPAND -->
 
-    z-index: 2;
+        <div class="highlight-card">
 
-    width: 74px;
-    height: 74px;
+            <div class="highlight-icon">
+                <img
+                    src="expand-icon.png"
+                    alt="Expand"
+                >
+            </div>
 
-    min-width: 74px;
+            <div class="highlight-content">
 
-    margin-right: 20px;
+                <h3>EXPAND</h3>
 
-    border-radius: 50%;
+                <p>
+                    Building a larger PAHAL<br>
+                    ecosystem across industries.
+                </p>
 
-    border: 1px solid rgba(212,175,55,0.45);
+            </div>
 
-    background:
-        radial-gradient(
-            circle,
-            rgba(212,175,55,0.10),
-            rgba(5,5,5,0.95)
-        );
+        </div>
 
-    display: flex;
 
-    align-items: center;
-    justify-content: center;
+    </div>
 
-    box-shadow:
-        0 0 18px rgba(212,175,55,0.08);
-}
-
-
-.highlight-icon img {
-    width: 48px;
-    height: 48px;
-
-    object-fit: contain;
-
-    display: block;
-}
-
-
-/* =========================================================
-   CARD CONTENT
-========================================================= */
-
-.highlight-content {
-    position: relative;
-
-    z-index: 2;
-
-    padding-top: 3px;
-}
-
-
-.highlight-card h3 {
-    margin: 0 0 7px 0;
-
-    color: var(--gold);
-
-    font-size: 21px;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-}
-
-
-.highlight-card p {
-    margin: 0;
-
-    color: #a8a8a8;
-
-    font-size: 14px;
-
-    line-height: 1.45;
-}
-
-
-/* =========================================================
-   HOVER
-========================================================= */
-
-.highlight-card:hover {
-    transform: translateY(-5px);
-
-    border-color: rgba(212,175,55,0.85);
-
-    box-shadow:
-        0 16px 35px rgba(0,0,0,0.35),
-        0 0 22px rgba(212,175,55,0.08);
-}
-
-
-.highlight-card:hover .highlight-icon {
-    border-color: rgba(212,175,55,0.8);
-
-    box-shadow:
-        0 0 24px rgba(212,175,55,0.14);
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 900px) {
-
-    .about-highlights {
-        grid-template-columns: 1fr;
-    }
-
-    .highlight-card {
-        min-height: 105px;
-    }
-
-}
-
-
-@media (max-width: 600px) {
-
-    #about .section-text {
-        font-size: 17px;
-        line-height: 1.7;
-    }
-
-    .highlight-card {
-        padding: 18px;
-    }
-
-    .highlight-icon {
-        width: 62px;
-        height: 62px;
-
-        min-width: 62px;
-
-        margin-right: 16px;
-    }
-
-    .highlight-icon img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .highlight-card h3 {
-        font-size: 19px;
-    }
-
-    .highlight-card p {
-        font-size: 13px;
-    }
-
-}
+</section>
 
         /* =========================================================
            VISION
