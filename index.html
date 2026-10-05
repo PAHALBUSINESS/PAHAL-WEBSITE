@@ -477,8 +477,8 @@
 
 
 /* =========================================================
-   PAHAL ABOUT SECTION — FINAL FIX
-   3 CARDS + PAHAL BACKGROUND
+   PAHAL ABOUT SECTION — BUILD + GROW
+   PAHAL BACKGROUND
 ========================================================= */
 
 #about {
@@ -498,11 +498,14 @@
 }
 
 
-/* ABOUT CONTENT */
+/* =========================================================
+   ABOUT CARDS — ONLY 2 CARDS
+========================================================= */
+
 #about .about-highlights {
     display: grid !important;
 
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
 
     gap: 28px !important;
 
@@ -513,10 +516,12 @@
 
 
 /* =========================================================
-   CARDS — SMALLER / WIDER / SAME SIZE
+   CARDS
 ========================================================= */
 
 #about .highlight-card {
+    position: relative !important;
+
     width: 100% !important;
 
     min-height: 155px !important;
@@ -574,7 +579,9 @@
 }
 
 
-/* TITLE */
+/* =========================================================
+   TITLE
+========================================================= */
 
 #about .highlight-card h3 {
     margin: 0 0 7px 0 !important;
@@ -587,7 +594,9 @@
 }
 
 
-/* TEXT */
+/* =========================================================
+   TEXT
+========================================================= */
 
 #about .highlight-card p {
     margin: 0 !important;
@@ -597,19 +606,6 @@
     line-height: 1.45 !important;
 
     max-width: 100% !important;
-}
-
-
-/* =========================================================
-   DESKTOP — KEEP ALL 3 CARDS IN ONE ROW
-========================================================= */
-
-@media (min-width: 901px) {
-
-    #about .about-highlights {
-        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    }
-
 }
 
 
@@ -654,6 +650,7 @@
 
     #about .highlight-card {
         height: auto !important;
+
         min-height: 140px !important;
     }
 
@@ -699,62 +696,30 @@
     }
 
 }
-        <!-- =========================================================
-     ABOUT
-========================================================= -->
-
-<section id="about">
-
-    <h2 class="section-title">
-        About PAHAL
-    </h2>
-
-    <div class="section-line"></div>
-
-    <div class="about-content">
-
-        <p class="section-text">
-            PAHAL is a growing business group built with a long-term
-            vision to create, develop and expand businesses across
-            multiple industries.
-        </p>
-
-        <p class="section-text" style="margin-top:20px;">
-            We believe in starting with strong foundations,
-            understanding the market, creating real value for
-            customers and growing step by step.
-        </p>
-
-        <p class="section-text" style="margin-top:20px;">
-            From our existing businesses to future ventures,
-            every PAHAL business is part of a larger vision —
-            building a trusted brand, creating opportunities
-            and growing for the future.
-        </p>
-
-      ```html
 <!-- =========================================================
      ABOUT HIGHLIGHTS
 ========================================================= -->
 
 <div class="about-highlights">
 
+  <div class="about-highlights">
+
     <!-- BUILD -->
     <div class="highlight-card">
 
         <div class="highlight-icon">
-            <img
-                src="./build-icon.png"
-                alt="Build"
-            >
+            <img src="./grow-icon-clean.png" alt="Build">
         </div>
 
         <div class="highlight-content">
+
             <h3>BUILD</h3>
+
             <p>
                 Strong foundations.<br>
                 Real businesses.
             </p>
+
         </div>
 
     </div>
@@ -764,24 +729,22 @@
     <div class="highlight-card">
 
         <div class="highlight-icon">
-            <img
-                src="./grow-icon-clean.png"
-                alt="Grow"
-            >
+            <img src="./grow-icon.png" alt="Grow">
         </div>
 
         <div class="highlight-content">
+
             <h3>GROW</h3>
+
             <p>
-                Step-by-step growth through<br>
-                experience and reinvestment.
+                Step-by-step growth through experience and reinvestment.
             </p>
+
         </div>
 
     </div>
 
 </div>
-```
 
         /* =========================================================
            VISION
