@@ -477,7 +477,7 @@
 
 
 /* =========================================================
-   ABOUT CARDS — FINAL CLEAN VERSION
+   ABOUT CARDS — FINAL VERSION
 ========================================================= */
 
 #about .about-highlights {
@@ -500,11 +500,11 @@
     align-items: center !important;
 
     width: 100% !important;
-    min-height: 170px !important;
+    min-height: 220px !important;
 
     box-sizing: border-box !important;
 
-    padding: 28px !important;
+    padding: 32px !important;
 
     background:
         linear-gradient(
@@ -559,12 +559,12 @@
     position: relative !important;
     z-index: 2 !important;
 
-    flex: 0 0 74px !important;
+    flex: 0 0 78px !important;
 
-    width: 74px !important;
-    height: 74px !important;
+    width: 78px !important;
+    height: 78px !important;
 
-    margin-right: 22px !important;
+    margin-right: 24px !important;
 
     display: flex !important;
     align-items: center !important;
@@ -573,6 +573,7 @@
     box-sizing: border-box !important;
 
     border: 1px solid rgba(212,175,55,0.55) !important;
+
     border-radius: 50% !important;
 
     background:
@@ -621,11 +622,12 @@
 #about .highlight-card h3 {
     display: block !important;
 
-    margin: 0 0 8px 0 !important;
+    margin: 0 0 10px 0 !important;
 
     color: #d4af37 !important;
 
-    font-size: 22px !important;
+    font-size: 23px !important;
+
     font-weight: 700 !important;
 
     line-height: 1.2 !important;
@@ -643,9 +645,9 @@
 
     color: #a8a8a8 !important;
 
-    font-size: 15px !important;
+    font-size: 16px !important;
 
-    line-height: 1.5 !important;
+    line-height: 1.55 !important;
 
     max-width: 100% !important;
 }
@@ -667,7 +669,7 @@
 
 
 /* =========================================================
-   MOBILE
+   TABLET / MOBILE
 ========================================================= */
 
 @media (max-width: 900px) {
@@ -679,9 +681,15 @@
 }
 
 
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
 @media (max-width: 600px) {
 
     #about .highlight-card {
+        min-height: 160px !important;
+
         padding: 20px !important;
     }
 
@@ -696,6 +704,7 @@
 
     #about .highlight-icon img {
         width: 40px !important;
+
         height: 40px !important;
     }
 
@@ -705,47 +714,8 @@
 
     #about .highlight-card p {
         font-size: 13px !important;
-    }
 
-}
-
-/* =========================================================
-   ABOUT CARDS — MOBILE
-========================================================= */
-
-@media (max-width: 900px) {
-
-    #about .about-highlights {
-        grid-template-columns: 1fr !important;
-    }
-
-}
-
-@media (max-width: 600px) {
-
-    #about .highlight-card {
-        min-height: 135px !important;
-        padding: 20px !important;
-    }
-
-    #about .highlight-icon {
-        flex-basis: 62px !important;
-        width: 62px !important;
-        height: 62px !important;
-        margin-right: 16px !important;
-    }
-
-    #about .highlight-icon img {
-        width: 40px !important;
-        height: 40px !important;
-    }
-
-    #about .highlight-card h3 {
-        font-size: 19px !important;
-    }
-
-    #about .highlight-card p {
-        font-size: 13px !important;
+        line-height: 1.5 !important;
     }
 
 }
