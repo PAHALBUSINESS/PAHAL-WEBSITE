@@ -481,70 +481,30 @@
 ========================================================= */
 
 /* =========================================================
-   PAHAL ABOUT — FINAL SPLIT BACKGROUND OVERRIDE
-   LEFT 50% BLACK / RIGHT 50% IMAGE
+   PAHAL ABOUT — RIGHT SIDE BACKGROUND
 ========================================================= */
 
 #about {
     position: relative !important;
     overflow: hidden !important;
 
-    background: #050505 !important;
-    background-image: none !important;
-
-    isolation: isolate !important;
-}
-
-
-/* RIGHT HALF — PAHAL IMAGE */
-#about::before {
-    content: "" !important;
-
-    position: absolute !important;
-    top: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-
-    width: 50% !important;
-
-    background-image: url("./about-pahal.png") !important;
-    background-repeat: no-repeat !important;
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.98) 0%,
+            rgba(0, 0, 0, 0.88) 28%,
+            rgba(0, 0, 0, 0.55) 52%,
+            rgba(0, 0, 0, 0.28) 75%,
+            rgba(0, 0, 0, 0.35) 100%
+        ),
+        url("./about-pahal.png") !important;
 
     background-size: cover !important;
-    background-position: center center !important;
 
-    z-index: 0 !important;
-}
+    /* IMAGE KO RIGHT SIDE KI TARAF PUSH KAREGA */
+    background-position: 75% center !important;
 
-
-/* LEFT BLACK + SOFT BLEND */
-#about::after {
-    content: "" !important;
-
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    bottom: 0 !important;
-
-    width: 55% !important;
-
-    background: linear-gradient(
-        90deg,
-        #050505 0%,
-        #050505 72%,
-        rgba(5,5,5,0.96) 88%,
-        rgba(5,5,5,0.25) 100%
-    ) !important;
-
-    z-index: 1 !important;
-    pointer-events: none !important;
-}
-
-
-/* ALL ABOUT CONTENT ABOVE IMAGE */
-#about > * {
-    position: relative !important;
-    z-index: 2 !important;
+    background-repeat: no-repeat !important;
 }
 /* =========================================================
    ABOUT CARDS
