@@ -477,18 +477,20 @@
 
 
 /* =========================================================
-   PAHAL ABOUT SECTION — BUILD + GROW
-   PAHAL BACKGROUND
+   PAHAL ABOUT — FINAL 2 CARD VERSION
 ========================================================= */
 
 #about {
     position: relative !important;
     overflow: hidden !important;
 
-    background-image:
+    background:
         linear-gradient(
-            rgba(0, 0, 0, 0.62),
-            rgba(0, 0, 0, 0.72)
+            90deg,
+            rgba(0,0,0,0.98) 0%,
+            rgba(0,0,0,0.94) 42%,
+            rgba(0,0,0,0.58) 62%,
+            rgba(0,0,0,0.42) 100%
         ),
         url("./about-pahal.png") !important;
 
@@ -499,7 +501,7 @@
 
 
 /* =========================================================
-   ABOUT CARDS — ONLY 2 CARDS
+   ABOUT CARDS
 ========================================================= */
 
 #about .about-highlights {
@@ -516,26 +518,62 @@
 
 
 /* =========================================================
-   CARDS
+   CARD — RESTORE PROPER DESIGN
 ========================================================= */
 
 #about .highlight-card {
     position: relative !important;
 
-    width: 100% !important;
-
-    min-height: 155px !important;
-    height: 155px !important;
-
-    padding: 24px !important;
-
-    box-sizing: border-box !important;
-
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
 
+    width: 100% !important;
+
+    min-height: 170px !important;
+    height: 170px !important;
+
+    box-sizing: border-box !important;
+
+    padding: 28px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(25,25,25,0.94),
+            rgba(7,7,7,0.97)
+        ) !important;
+
+    border: 1px solid rgba(212,175,55,0.55) !important;
+
+    border-top: 2px solid #d4af37 !important;
+
+    border-radius: 8px !important;
+
     overflow: hidden !important;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.35) !important;
+}
+
+
+/* GOLD LIGHT INSIDE CARD */
+
+#about .highlight-card::after {
+    content: "" !important;
+
+    position: absolute !important;
+
+    inset: 0 !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(212,175,55,0.08),
+            transparent 45%
+        ) !important;
+
+    pointer-events: none !important;
 }
 
 
@@ -544,95 +582,122 @@
 ========================================================= */
 
 #about .highlight-icon {
-    flex: 0 0 68px !important;
+    position: relative !important;
 
-    width: 68px !important;
-    height: 68px !important;
+    z-index: 2 !important;
 
-    margin-right: 20px !important;
+    flex: 0 0 78px !important;
+
+    width: 78px !important;
+    height: 78px !important;
+
+    margin-right: 24px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    box-sizing: border-box !important;
+
+    border: 1px solid rgba(212,175,55,0.60) !important;
+
+    border-radius: 50% !important;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(212,175,55,0.14),
+            rgba(5,5,5,0.96)
+        ) !important;
+
+    box-shadow:
+        0 0 20px rgba(212,175,55,0.10) !important;
+
+    overflow: hidden !important;
 }
 
 
-/* =========================================================
-   ICON IMAGE
-========================================================= */
+/* ICON IMAGE */
 
 #about .highlight-icon img {
-    width: 44px !important;
-    height: 44px !important;
+    display: block !important;
 
-    max-width: 44px !important;
-    max-height: 44px !important;
+    width: 48px !important;
+    height: 48px !important;
+
+    max-width: 48px !important;
+    max-height: 48px !important;
 
     object-fit: contain !important;
 }
 
 
 /* =========================================================
-   CARD CONTENT
+   CONTENT
 ========================================================= */
 
 #about .highlight-content {
+    position: relative !important;
+
+    z-index: 2 !important;
+
     flex: 1 1 auto !important;
 
     min-width: 0 !important;
 }
 
 
-/* =========================================================
-   TITLE
-========================================================= */
+/* TITLE */
 
 #about .highlight-card h3 {
-    margin: 0 0 7px 0 !important;
+    display: block !important;
 
-    font-size: 21px !important;
+    margin: 0 0 8px 0 !important;
+
+    color: #d4af37 !important;
+
+    font-size: 25px !important;
+
+    font-weight: 700 !important;
 
     line-height: 1.2 !important;
+
+    letter-spacing: 1px !important;
 
     white-space: nowrap !important;
 }
 
 
-/* =========================================================
-   TEXT
-========================================================= */
+/* TEXT */
 
 #about .highlight-card p {
+    display: block !important;
+
     margin: 0 !important;
 
-    font-size: 14px !important;
+    color: #b5b5b5 !important;
 
-    line-height: 1.45 !important;
+    font-size: 16px !important;
+
+    line-height: 1.5 !important;
 
     max-width: 100% !important;
 }
 
 
 /* =========================================================
-   TABLET
+   HOVER
 ========================================================= */
 
-@media (max-width: 1100px) and (min-width: 901px) {
+#about .highlight-card:hover {
+    transform: translateY(-5px) !important;
 
-    #about .highlight-card {
-        padding: 20px !important;
-    }
+    border-color: rgba(212,175,55,0.85) !important;
 
-    #about .highlight-icon {
-        flex-basis: 60px !important;
-
-        width: 60px !important;
-        height: 60px !important;
-
-        margin-right: 15px !important;
-    }
-
-    #about .highlight-icon img {
-        width: 38px !important;
-        height: 38px !important;
-    }
-
+    box-shadow:
+        0 18px 40px rgba(0,0,0,0.40),
+        0 0 25px rgba(212,175,55,0.10) !important;
 }
 
 
@@ -651,7 +716,7 @@
     #about .highlight-card {
         height: auto !important;
 
-        min-height: 140px !important;
+        min-height: 150px !important;
     }
 
 }
@@ -668,27 +733,27 @@
     }
 
     #about .highlight-card {
-        min-height: 125px !important;
+        min-height: 135px !important;
 
-        padding: 18px !important;
+        padding: 20px !important;
     }
 
     #about .highlight-icon {
-        flex: 0 0 58px !important;
+        flex: 0 0 62px !important;
 
-        width: 58px !important;
-        height: 58px !important;
+        width: 62px !important;
+        height: 62px !important;
 
-        margin-right: 14px !important;
+        margin-right: 16px !important;
     }
 
     #about .highlight-icon img {
-        width: 36px !important;
-        height: 36px !important;
+        width: 40px !important;
+        height: 40px !important;
     }
 
     #about .highlight-card h3 {
-        font-size: 18px !important;
+        font-size: 20px !important;
     }
 
     #about .highlight-card p {
