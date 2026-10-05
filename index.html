@@ -477,7 +477,7 @@
 
 
 /* =========================================================
-   ABOUT CARDS — FINAL HARD FIX
+   ABOUT CARDS — FINAL CLEAN VERSION
 ========================================================= */
 
 #about .about-highlights {
@@ -486,6 +486,11 @@
     gap: 28px !important;
     margin-top: 55px !important;
 }
+
+
+/* =========================================================
+   CARD
+========================================================= */
 
 #about .highlight-card {
     position: relative !important;
@@ -496,6 +501,7 @@
 
     width: 100% !important;
     min-height: 170px !important;
+
     box-sizing: border-box !important;
 
     padding: 28px !important;
@@ -509,6 +515,7 @@
 
     border: 1px solid rgba(212,175,55,0.55) !important;
     border-top: 2px solid #d4af37 !important;
+
     border-radius: 6px !important;
 
     overflow: hidden !important;
@@ -521,6 +528,11 @@
         border-color 0.35s ease,
         box-shadow 0.35s ease !important;
 }
+
+
+/* =========================================================
+   GOLD CARD LIGHT
+========================================================= */
 
 #about .highlight-card::after {
     content: "" !important;
@@ -537,6 +549,11 @@
 
     pointer-events: none !important;
 }
+
+
+/* =========================================================
+   ICON
+========================================================= */
 
 #about .highlight-icon {
     position: relative !important;
@@ -567,7 +584,10 @@
 
     box-shadow:
         0 0 20px rgba(212,175,55,0.10) !important;
+
+    overflow: hidden !important;
 }
+
 
 #about .highlight-icon img {
     display: block !important;
@@ -581,13 +601,22 @@
     object-fit: contain !important;
 }
 
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
 #about .highlight-content {
     position: relative !important;
     z-index: 2 !important;
 
-    flex: 1 !important;
+    flex: 1 1 auto !important;
+
     min-width: 0 !important;
+
+    width: auto !important;
 }
+
 
 #about .highlight-card h3 {
     display: block !important;
@@ -600,8 +629,12 @@
     font-weight: 700 !important;
 
     line-height: 1.2 !important;
+
     letter-spacing: 1px !important;
+
+    white-space: nowrap !important;
 }
+
 
 #about .highlight-card p {
     display: block !important;
@@ -611,8 +644,16 @@
     color: #a8a8a8 !important;
 
     font-size: 15px !important;
-    line-height: 1.55 !important;
+
+    line-height: 1.5 !important;
+
+    max-width: 100% !important;
 }
+
+
+/* =========================================================
+   HOVER
+========================================================= */
 
 #about .highlight-card:hover {
     transform: translateY(-6px) !important;
@@ -624,6 +665,49 @@
         0 0 25px rgba(212,175,55,0.10) !important;
 }
 
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    #about .about-highlights {
+        grid-template-columns: 1fr !important;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    #about .highlight-card {
+        padding: 20px !important;
+    }
+
+    #about .highlight-icon {
+        flex: 0 0 62px !important;
+
+        width: 62px !important;
+        height: 62px !important;
+
+        margin-right: 16px !important;
+    }
+
+    #about .highlight-icon img {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    #about .highlight-card h3 {
+        font-size: 19px !important;
+    }
+
+    #about .highlight-card p {
+        font-size: 13px !important;
+    }
+
+}
 
 /* =========================================================
    ABOUT CARDS — MOBILE
