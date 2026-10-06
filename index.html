@@ -960,21 +960,13 @@
 
 
          ```css
-/* =========================================================
-   VISION SECTION
-========================================================= */
+ /* =========================================================
+    VISION SECTION
+ ========================================================= */
 
 #vision {
     position: relative;
-
     min-height: 720px;
-
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.45),
-            rgba(0, 0, 0, 0.60)
-        ),
-        url("pahal-vision-bg.png") center center / cover no-repeat !important;
 
     padding: 90px 8% 110px;
 
@@ -983,34 +975,72 @@
     justify-content: center;
 
     overflow: hidden;
+
+    background: #050505 !important;
     box-sizing: border-box;
 }
 
-#vision .section-title {
-    position: relative;
-    z-index: 2;
-    margin-bottom: 20px;
+
+/* VISION BACKGROUND IMAGE */
+
+#vision::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.38),
+            rgba(0, 0, 0, 0.62)
+        ),
+        url("./pahal-vision-bg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: 0;
 }
 
-#vision .section-line {
-    position: relative;
-    z-index: 2;
-    margin-bottom: 55px;
-}
 
+/* CONTENT ABOVE BACKGROUND */
+
+#vision .section-title,
+#vision .section-line,
 #vision .vision-main {
     position: relative;
     z-index: 2;
+}
 
+
+/* HEADING */
+
+#vision .section-title {
+    margin-bottom: 20px;
+}
+
+
+/* GOLD LINE */
+
+#vision .section-line {
+    margin-bottom: 55px;
+}
+
+
+/* VISION TEXT */
+
+#vision .vision-main {
     max-width: 850px;
 
     background: rgba(0, 0, 0, 0.35);
+
     border-left: 2px solid #d4af37;
 
     padding: 30px 35px;
 
     box-sizing: border-box;
 }
+
 
 #vision .vision-main p {
     margin: 0;
@@ -1019,13 +1049,14 @@
 
     font-size: 25px;
     line-height: 1.7;
+
     font-weight: 400;
 }
 
 
 /* =========================================================
-   VISION MOBILE
-========================================================= */
+   MOBILE
+ ========================================================= */
 
 @media (max-width: 768px) {
 
@@ -1033,8 +1064,10 @@
         min-height: 620px;
 
         padding: 75px 25px 80px;
+    }
 
-        background-position: center center !important;
+    #vision::before {
+        background-position: center center;
     }
 
     #vision .section-title {
@@ -1046,8 +1079,8 @@
     }
 
     #vision .vision-main {
-        padding: 22px 20px;
         max-width: 100%;
+        padding: 22px 20px;
     }
 
     #vision .vision-main p {
