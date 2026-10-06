@@ -966,18 +966,15 @@
 
 #vision {
     position: relative;
+
     min-height: 720px;
 
-    background-image:
+    background:
         linear-gradient(
-            rgba(0, 0, 0, 0.58),
-            rgba(0, 0, 0, 0.68)
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.60)
         ),
-        url("pahal-vision-bg.png");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+        url("pahal-vision-bg.png") center center / cover no-repeat !important;
 
     padding: 90px 8% 110px;
 
@@ -986,9 +983,8 @@
     justify-content: center;
 
     overflow: hidden;
+    box-sizing: border-box;
 }
-
-/* Vision heading */
 
 #vision .section-title {
     position: relative;
@@ -996,15 +992,11 @@
     margin-bottom: 20px;
 }
 
-/* Gold line */
-
 #vision .section-line {
     position: relative;
     z-index: 2;
     margin-bottom: 55px;
 }
-
-/* Main vision statement */
 
 #vision .vision-main {
     position: relative;
@@ -1012,12 +1004,12 @@
 
     max-width: 850px;
 
-    background: rgba(0, 0, 0, 0.38);
+    background: rgba(0, 0, 0, 0.35);
     border-left: 2px solid #d4af37;
 
     padding: 30px 35px;
 
-    backdrop-filter: blur(2px);
+    box-sizing: border-box;
 }
 
 #vision .vision-main p {
@@ -1027,13 +1019,12 @@
 
     font-size: 25px;
     line-height: 1.7;
-
     font-weight: 400;
 }
 
 
 /* =========================================================
-   MOBILE
+   VISION MOBILE
 ========================================================= */
 
 @media (max-width: 768px) {
@@ -1043,7 +1034,7 @@
 
         padding: 75px 25px 80px;
 
-        background-position: center center;
+        background-position: center center !important;
     }
 
     #vision .section-title {
@@ -1056,7 +1047,6 @@
 
     #vision .vision-main {
         padding: 22px 20px;
-
         max-width: 100%;
     }
 
@@ -1065,9 +1055,6 @@
         line-height: 1.7;
     }
 }
-```
-
-
             /* CONTACT */
 
             .contact-grid {
