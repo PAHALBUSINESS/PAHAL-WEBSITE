@@ -523,91 +523,90 @@
         }
 
 
-        /* =========================================================
-           VISION
-        ========================================================= */
+       /* =========================================================
+   VISION SECTION
+========================================================= */
 
-        #vision {
-            background:
-                radial-gradient(
-                    circle at 15% 20%,
-                    rgba(212,175,55,0.035),
-                    transparent 30%
-                ),
-                #060606;
-        }
+#vision {
+    position: relative;
+    min-height: 720px;
 
-        .vision-main {
-            max-width: 850px;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.42),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("./pahal-vision-bg.png");
 
-            margin-bottom: 50px;
-        }
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-        .vision-main p {
-            color: var(--text);
+    padding: 90px 6% 110px;
 
-            font-size: 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-            line-height: 1.8;
-        }
+    overflow: hidden;
+}
 
-        .vision-cards {
-            display: grid;
+#vision .section-title {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 20px;
+}
 
-            grid-template-columns:
-                repeat(3, minmax(0,1fr));
+#vision .section-line {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 55px;
+}
 
-            gap: 24px;
+#vision .vision-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
 
-            margin-top: 20px;
-        }
+#vision .vision-content p {
+    margin: 0;
+    color: #e8e8e8;
+    font-size: 25px;
+    line-height: 1.7;
+    font-weight: 400;
+}
 
-        .vision-card {
-            padding: 34px;
 
-            background:
-                linear-gradient(
-                    145deg,
-                    #121212,
-                    #0b0b0b
-                );
+/* =========================================================
+   MOBILE
+========================================================= */
 
-            border: 1px solid #292929;
+@media (max-width: 768px) {
 
-            border-top:
-                2px solid var(--gold);
+    #vision {
+        min-height: 620px;
+        padding: 75px 25px 80px;
+        background-position: center center;
+    }
 
-            transition: 0.3s ease;
-        }
+    #vision .section-title {
+        font-size: 42px;
+    }
 
-        .vision-card:hover {
-            transform: translateY(-6px);
+    #vision .section-line {
+        margin-bottom: 35px;
+    }
 
-            border-color:
-                rgba(212,175,55,0.70);
+    #vision .vision-content {
+        max-width: 100%;
+    }
 
-            box-shadow:
-                0 18px 40px rgba(0,0,0,0.40);
-        }
-
-        .vision-card h3 {
-            color: var(--gold);
-
-            font-size: 22px;
-
-            letter-spacing: 1px;
-
-            margin-bottom: 12px;
-        }
-
-        .vision-card p {
-            color: #a5a5a5;
-
-            font-size: 15px;
-
-            line-height: 1.7;
-        }
-
+    #vision .vision-content p {
+        font-size: 18px;
+        line-height: 1.7;
+    }
+}
 
         /* =========================================================
            CONTACT
