@@ -959,18 +959,94 @@
             }
 
 
-            /* VISION */
+          /* =========================================================
+   VISION SECTION
+========================================================= */
 
-            .vision-cards {
-                grid-template-columns: 1fr;
+#vision {
+    position: relative;
+    min-height: 720px;
 
-                gap: 16px;
-            }
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.48),
+            rgba(0, 0, 0, 0.58)
+        ),
+        url("pahal-vision-bg.png");
 
-            .vision-card {
-                padding: 27px;
-            }
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
+    padding: 90px 6% 110px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+#vision .section-title {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 20px;
+}
+
+#vision .section-line {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 55px;
+}
+
+#vision .vision-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+#vision .vision-content p {
+    margin: 0;
+
+    color: #e8e8e8;
+
+    font-size: 25px;
+    line-height: 1.7;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    #vision {
+        min-height: 620px;
+        padding: 75px 25px 80px;
+
+        background-position: center center;
+    }
+
+    #vision .section-title {
+        font-size: 42px;
+    }
+
+    #vision .section-line {
+        margin-bottom: 35px;
+    }
+
+    #vision .vision-content {
+        max-width: 100%;
+    }
+
+    #vision .vision-content p {
+        font-size: 18px;
+        line-height: 1.7;
+    }
+}
 
             /* CONTACT */
 
@@ -1339,80 +1415,25 @@
 
 
 
-    <!-- =========================================================
-         VISION
-    ========================================================= -->
+  <!-- =========================================================
+     VISION
+========================================================= -->
+<section id="vision">
 
-    <section id="vision">
+    <h2 class="section-title">
+        Our Vision
+    </h2>
 
-        <h2 class="section-title">
-            Our Vision
-        </h2>
+    <div class="section-line"></div>
 
-        <div class="section-line"></div>
+    <div class="vision-content">
+        <p>
+            To build PAHAL into a trusted business group
+            with a presence across multiple industries.
+        </p>
+    </div>
 
-
-        <div class="vision-main">
-
-            <p>
-                To build PAHAL into a trusted business group
-                with a presence across multiple industries.
-            </p>
-
-        </div>
-
-
-        <div class="vision-cards">
-
-
-            <div class="vision-card">
-
-                <h3>
-                    START
-                </h3>
-
-                <p>
-                    We believe in starting small
-                    and building strong foundations.
-                </p>
-
-            </div>
-
-
-            <div class="vision-card">
-
-                <h3>
-                    GROW
-                </h3>
-
-                <p>
-                    Growing through experience,
-                    discipline and reinvestment.
-                </p>
-
-            </div>
-
-
-            <div class="vision-card">
-
-                <h3>
-                    BUILD
-                </h3>
-
-                <p>
-                    Creating businesses that generate
-                    value, create opportunities and
-                    become part of a larger PAHAL ecosystem.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
+</section>
 
     <!-- =========================================================
          CONTACT
