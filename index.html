@@ -1463,5 +1463,160 @@
                     Looking for chandeliers,
                     fancy lights or other lighting
                     solutions?
+                    <!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section id="contact">
+
+    <h2 class="section-title">
+        Contact PAHAL
+    </h2>
+
+    <div class="section-line"></div>
+
+
+    <div class="contact-grid">
+
+
+        <div class="contact-block">
+
+            <h3>
+                PAHAL Business Inquiries
+            </h3>
+
+            <p>
+
+                For business inquiries and
+                general queries, contact us at:
+
+                <br><br>
+
+                <a href="mailto:pahalbusiness@gmail.com">
+                    pahalbusiness@gmail.com
+                </a>
+
+            </p>
+
+        </div>
+
+
+        <div class="contact-block">
+
+            <h3>
+                Baba Lighting House
+            </h3>
+
+            <p>
+
+                Looking for chandeliers,
+                fancy lights or other lighting
+                solutions?
+
+                <br><br>
+
+                Contact us at:
+
+                <br>
+
+                <a href="mailto:babalighthouseggn@gmail.com">
+                    babalighthouseggn@gmail.com
+                </a>
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="footer-brand">
+        PAHAL
+    </div>
+
+    <div class="footer-tagline">
+        Creating Value Today. Building for Tomorrow.
+    </div>
+
+    <div class="footer-copy">
+        © 2026 PAHAL. All Rights Reserved.
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     MOBILE MENU SCRIPT
+========================================================= -->
+
+<script>
+
+    const menuButton =
+        document.getElementById("menuButton");
+
+    const mainNav =
+        document.getElementById("mainNav");
+
+
+    menuButton.addEventListener(
+        "click",
+        function () {
+
+            const isOpen =
+                mainNav.classList.toggle("active");
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+            menuButton.textContent =
+                isOpen ? "×" : "☰";
+
+        }
+    );
+
+
+    const navLinks =
+        mainNav.querySelectorAll("a");
+
+
+    navLinks.forEach(
+        function (link) {
+
+            link.addEventListener(
+                "click",
+                function () {
+
+                    mainNav.classList.remove("active");
+
+                    menuButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    menuButton.textContent = "☰";
+
+                }
+            );
+
+        }
+    );
+
+</script>
+
+</body>
+</html>
 
                    
