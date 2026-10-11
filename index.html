@@ -698,46 +698,112 @@
         }
 
 
-        /* =========================================================
-           FOOTER
-        ========================================================= */
+      
+/* =========================================================
+   FOOTER
+========================================================= */
 
-        footer {
-            padding: 45px 8% 38px;
+footer {
+    padding: 45px 8% 38px;
+    background: #040404;
+    border-top: 1px solid #202020;
+}
 
-            text-align: center;
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
 
-            background: #040404;
+.footer-brand {
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 8px;
+}
 
-            border-top:
-                1px solid #202020;
-        }
+.footer-tagline {
+    color: #777777;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+}
 
-        .footer-brand {
-            color: #ffffff;
+.footer-heading {
+    color: #c9a45c;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
 
-            font-size: 23px;
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
 
-            font-weight: 700;
+.footer-links a,
+.footer-contact a {
+    color: #999999;
+    font-size: 13px;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: color 0.3s ease;
+}
 
-            letter-spacing: 5px;
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: #c9a45c;
+}
 
-            margin-bottom: 8px;
-        }
+.footer-contact-label {
+    color: #ffffff;
+    font-size: 12px;
+    margin-bottom: -6px;
+}
 
-        .footer-tagline {
-            color: #777777;
+.footer-bottom {
+    border-top: 1px solid #202020;
+    margin-top: 35px;
+    padding-top: 20px;
+    text-align: center;
+}
 
-            font-size: 13px;
+.footer-copy {
+    color: #555555;
+    font-size: 12px;
+}
 
-            margin-bottom: 14px;
-        }
+@media (max-width: 700px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 20px;
+    }
 
-        .footer-copy {
-            color: #555555;
+    .footer-about {
+        grid-column: 1 / -1;
+    }
+}
 
-            font-size: 12px;
-        }
+@media (max-width: 480px) {
+    footer {
+        padding: 35px 6% 25px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .footer-about {
+        grid-column: auto;
+    }
+}
 
 
         /* =========================================================
