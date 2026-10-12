@@ -701,6 +701,7 @@
       
 
 
+
 /* =========================================================
    PAHAL PREMIUM EARTH FOOTER
 ========================================================= */
@@ -709,75 +710,80 @@ footer {
     position: relative;
     isolation: isolate;
     overflow: hidden;
-    padding: 45px 8% 28px;
+
+    padding: 55px 8% 28px;
     background: #040404;
-    border-top: 1px solid #202020;
+    border-top: 1px solid rgba(212, 175, 55, 0.18);
 }
 
-/* Earth image: keep the upper part black and show Earth below */
-
+/* Earth image — anchored to the lower part */
 footer::before {
     content: "";
     position: absolute;
     inset: 0;
-    z-index: -2;
+    z-index: 0;
+
     background-image: url("pahal-footer-earth-bg.png");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: 100% auto;
+
     pointer-events: none;
 }
 
-
-/* Gradient: dark text area, brighter Earth area */
-
+/* Keep the top dark; reveal the Earth toward the bottom */
 footer::after {
     content: "";
     position: absolute;
     inset: 0;
-    z-index: -1;
-  
-background: linear-gradient(
-    to bottom,
-    #040404 0%,
-    #040404 28%,
-    rgba(4, 4, 4, 0.78) 42%,
-    rgba(4, 4, 4, 0.18) 65%,
-    rgba(4, 4, 4, 0.40) 100%
-);
+    z-index: 1;
+
+    background: linear-gradient(
+        to bottom,
+        #040404 0%,
+        rgba(4, 4, 4, 0.98) 20%,
+        rgba(4, 4, 4, 0.82) 38%,
+        rgba(4, 4, 4, 0.38) 62%,
+        rgba(4, 4, 4, 0.42) 100%
+    );
 
     pointer-events: none;
 }
 
-
+/* Three desktop columns */
 .footer-container {
     position: relative;
-    z-index: 1;
+    z-index: 2;
+
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1.5fr;
-    gap: 40px;
-    max-width: 1200px;
+    grid-template-columns: 1.35fr 0.85fr 1.3fr;
+    gap: 48px;
+
+    width: 100%;
+    max-width: 1250px;
     margin: 0 auto;
     text-align: left;
 }
 
-.footer-brand {
-    color: #ffffff;
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 5px;
-    margin-bottom: 10px;
+.footer-about,
+.footer-navigation,
+.footer-contact {
+    min-width: 0;
 }
 
-.footer-about {
-    position: relative;
+.footer-brand {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 12px;
 }
 
 .footer-tagline {
+    max-width: 360px;
     color: #c0c0c0;
     font-size: 14px;
     line-height: 1.8;
-    margin-bottom: 14px;
 }
 
 .footer-heading {
@@ -792,17 +798,18 @@ background: linear-gradient(
 .footer-contact {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    align-items: flex-start;
+    gap: 13px;
 }
 
 .footer-links a,
 .footer-contact a {
     color: #d0d0d0;
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.7;
     text-decoration: none;
     overflow-wrap: anywhere;
-    transition: color 0.3s ease;
+    transition: color 0.25s ease;
 }
 
 .footer-links a:hover,
@@ -813,69 +820,116 @@ background: linear-gradient(
 .footer-contact-label {
     color: #ffffff;
     font-size: 13px;
-    font-weight: 500;
-    margin-bottom: -6px;
+    font-weight: 600;
+    margin-top: 2px;
+    margin-bottom: -7px;
 }
 
 .footer-bottom {
     position: relative;
-    z-index: 1;
-    border-top: 1px solid rgba(201, 164, 92, 0.25);
-    margin-top: 35px;
+    z-index: 2;
+
+    max-width: 1250px;
+    margin: 38px auto 0;
     padding-top: 20px;
+
+    border-top: 1px solid rgba(201, 164, 92, 0.28);
     text-align: center;
 }
 
 .footer-copy {
-    color: #999999;
+    color: #a0a0a0;
     font-size: 12px;
 }
 
 /* Tablet */
-@media (max-width: 700px) {
+@media (max-width: 900px) {
     footer {
-        padding: 40px 6% 25px;
-    }
-
-    footer::before {
-        background-size: auto 75%;
-        background-position: center bottom;
+        padding: 45px 6% 26px;
     }
 
     .footer-container {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px 20px;
+        grid-template-columns: 1.1fr 0.8fr 1.2fr;
+        gap: 25px;
     }
 
-    .footer-about {
-        grid-column: 1 / -1;
+    footer::before {
+        background-size: auto 85%;
+        background-position: center bottom;
     }
 }
 
 /* Mobile */
-@media (max-width: 480px) {
+@media (max-width: 700px) {
     footer {
-        padding: 35px 6% 25px;
-    }
-
-    footer::before {
-        background-size: auto 60%;
-        background-position: center bottom;
+        padding: 40px 6% 28px;
     }
 
     .footer-container {
         grid-template-columns: 1fr;
-        gap: 28px;
+        gap: 30px;
     }
 
-    .footer-about {
-        grid-column: auto;
+    .footer-brand {
+        font-size: 26px;
+    }
+
+    .footer-tagline {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .footer-heading {
+        margin-bottom: 14px;
+    }
+
+    .footer-links,
+    .footer-contact {
+        gap: 12px;
+    }
+
+    footer::before {
+        background-size: auto 65%;
+        background-position: center bottom;
+    }
+
+    footer::after {
+        background: linear-gradient(
+            to bottom,
+            #040404 0%,
+            #040404 35%,
+            rgba(4, 4, 4, 0.78) 52%,
+            rgba(4, 4, 4, 0.28) 75%,
+            rgba(4, 4, 4, 0.45) 100%
+        );
     }
 
     .footer-bottom {
-        margin-top: 28px;
+        margin-top: 30px;
+        padding-top: 18px;
     }
 }
+
+/* Small mobile */
+@media (max-width: 480px) {
+    footer {
+        padding: 35px 6% 24px;
+    }
+
+    footer::before {
+        background-size: auto 58%;
+        background-position: center bottom;
+    }
+
+    .footer-container {
+        gap: 27px;
+    }
+
+    .footer-copy {
+        font-size: 11px;
+    }
+}
+
 
         /* =========================================================
            TABLET
