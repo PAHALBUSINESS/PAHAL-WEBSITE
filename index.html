@@ -709,6 +709,28 @@ footer {
     border-top: 1px solid #202020;
 }
 
+footer {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    width: 650px;
+    height: 300px;
+    left: 50%;
+    top: -205px;
+    transform: translateX(-50%);
+    background: url("pahal-earth-hero-bg.png.png")
+        center top / 100% auto no-repeat;
+    border-radius: 50%;
+    opacity: 0.45;
+    z-index: -1;
+    pointer-events: none;
+}
+
 .footer-container {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1.5fr;
@@ -729,14 +751,6 @@ footer {
     position: relative;
 }
 
-.footer-earth-image {
-    display: block;
-    width: 200px;
-    max-width: 100%;
-    height: auto;
-    margin-top: 18px;
-    opacity: 0.85;
-}
 .footer-tagline {
     color: #777777;
     font-size: 13px;
@@ -1596,13 +1610,7 @@ header {
         Creating Value Today. Building for Tomorrow.
     </div>
 
-    <img
-        src="pahal-earth-hero-bg.png.png"
-        alt="PAHAL Earth"
-        class="footer-earth-image"
-    >
-</div>
-
+   
   <div class="footer-navigation">
             <h3 class="footer-heading">QUICK LINKS</h3>
             <div class="footer-links">
