@@ -715,6 +715,7 @@ footer {
 }
 
 /* Earth image: keep the upper part black and show Earth below */
+
 footer::before {
     content: "";
     position: absolute;
@@ -722,10 +723,11 @@ footer::before {
     z-index: -2;
     background-image: url("pahal-footer-earth-bg.png");
     background-repeat: no-repeat;
-    background-position: center 65%;
+    background-position: center bottom;
     background-size: 100% auto;
     pointer-events: none;
 }
+
 
 /* Gradient: dark text area, brighter Earth area */
 
@@ -734,15 +736,16 @@ footer::after {
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: linear-gradient(
-        to bottom,
-        #040404 0%,
-        rgba(4, 4, 4, 0.95) 20%,
-        rgba(4, 4, 4, 0.55) 38%,
-        rgba(4, 4, 4, 0.12) 58%,
-        rgba(4, 4, 4, 0.20) 78%,
-        rgba(4, 4, 4, 0.65) 100%
-    );
+  
+background: linear-gradient(
+    to bottom,
+    #040404 0%,
+    #040404 28%,
+    rgba(4, 4, 4, 0.78) 42%,
+    rgba(4, 4, 4, 0.18) 65%,
+    rgba(4, 4, 4, 0.40) 100%
+);
+
     pointer-events: none;
 }
 
