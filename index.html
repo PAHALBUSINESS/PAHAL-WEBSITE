@@ -708,13 +708,6 @@ footer {
     background: #040404;
     border-top: 1px solid #202020;
 }
-
-footer {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-}
-
 footer::before {
     content: "";
     position: absolute;
@@ -730,7 +723,6 @@ footer::before {
     z-index: -1;
     pointer-events: none;
 }
-
 .footer-container {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1.5fr;
