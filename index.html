@@ -699,42 +699,60 @@
 
 
       
-/* =========================================================
-   FOOTER
-========================================================= */
 
-footer {
-    padding: 45px 8% 38px;
-    background: #040404;
-    border-top: 1px solid #202020;
-}
+/* =========================================================
+   PAHAL PREMIUM EARTH FOOTER
+========================================================= */
 
 footer {
     position: relative;
     isolation: isolate;
     overflow: hidden;
+    padding: 45px 8% 28px;
+    background: #040404;
+    border-top: 1px solid #202020;
 }
 
+/* Earth background — lower half of footer */
 footer::before {
     content: "";
     position: absolute;
-inset: 0;
-  background:
-    linear-gradient(
-        to bottom,
-        rgba(4, 4, 4, 0.25) 0%,
-        rgba(4, 4, 4, 0.40) 45%,
-        rgba(4, 4, 4, 0.92) 100%
-    ),
-    url("pahal-footer-earth-bg.png")
-    center 38% / cover no-repeat;
-    
-    opacity: 0.95;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url("pahal-footer-earth-bg.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% auto;
+
+    pointer-events: none;
+}
+
+/* Dark overlay keeps all footer text readable */
+footer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
     z-index: -1;
+
+    background: linear-gradient(
+        to bottom,
+        #040404 0%,
+        rgba(4, 4, 4, 0.98) 24%,
+        rgba(4, 4, 4, 0.78) 43%,
+        rgba(4, 4, 4, 0.32) 70%,
+        rgba(4, 4, 4, 0.82) 100%
+    );
+
     pointer-events: none;
 }
 
 .footer-container {
+    position: relative;
+    z-index: 1;
     display: grid;
     grid-template-columns: 1.5fr 1fr 1.5fr;
     gap: 40px;
@@ -745,40 +763,43 @@ inset: 0;
 
 .footer-brand {
     color: #ffffff;
-    font-size: 23px;
+    font-size: 26px;
     font-weight: 700;
     letter-spacing: 5px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
+
 .footer-about {
     position: relative;
 }
 
 .footer-tagline {
-    color: #777777;
-    font-size: 13px;
-    line-height: 1.7;
+    color: #b0b0b0;
+    font-size: 14px;
+    line-height: 1.8;
     margin-bottom: 14px;
 }
 
 .footer-heading {
-    color: #c9a45c;
-    font-size: 13px;
-    letter-spacing: 1px;
-    margin-bottom: 18px;
+    color: #d5b16d;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
 }
 
 .footer-links,
 .footer-contact {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
 }
 
 .footer-links a,
 .footer-contact a {
-    color: #999999;
-    font-size: 13px;
+    color: #c0c0c0;
+    font-size: 14px;
+    line-height: 1.6;
     text-decoration: none;
     overflow-wrap: anywhere;
     transition: color 0.3s ease;
@@ -786,28 +807,41 @@ inset: 0;
 
 .footer-links a:hover,
 .footer-contact a:hover {
-    color: #c9a45c;
+    color: #d5b16d;
 }
 
 .footer-contact-label {
     color: #ffffff;
-    font-size: 12px;
+    font-size: 13px;
+    font-weight: 500;
     margin-bottom: -6px;
 }
 
 .footer-bottom {
-    border-top: 1px solid #202020;
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid rgba(201, 164, 92, 0.22);
     margin-top: 35px;
     padding-top: 20px;
     text-align: center;
 }
 
 .footer-copy {
-    color: #555555;
+    color: #888888;
     font-size: 12px;
 }
 
+/* Tablet */
 @media (max-width: 700px) {
+    footer {
+        padding: 40px 6% 25px;
+    }
+
+    footer::before {
+        background-size: auto 75%;
+        background-position: center bottom;
+    }
+
     .footer-container {
         grid-template-columns: 1fr 1fr;
         gap: 30px 20px;
@@ -818,9 +852,15 @@ inset: 0;
     }
 }
 
+/* Mobile */
 @media (max-width: 480px) {
     footer {
         padding: 35px 6% 25px;
+    }
+
+    footer::before {
+        background-size: auto 60%;
+        background-position: center bottom;
     }
 
     .footer-container {
@@ -830,6 +870,10 @@ inset: 0;
 
     .footer-about {
         grid-column: auto;
+    }
+
+    .footer-bottom {
+        margin-top: 28px;
     }
 }
 
