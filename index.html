@@ -119,6 +119,8 @@
             transition:
                 color 0.3s ease,
                 text-shadow 0.3s ease;
+            display: inline-block;
+            visibility: visible;
         }
         nav a {
     white-space: nowrap;
@@ -1373,7 +1375,32 @@ header {
                 height: 165px;
             }
         }
+/* Tumhara existing CSS yahan tak */
 
+/* PAHAL NAVBAR FIX */
+header {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
+    gap: 12px;
+}
+
+header nav {
+    display: flex;
+    flex: 0 1 auto;
+    min-width: 0;
+    gap: 16px;
+    justify-content: flex-end;
+}
+
+header nav a {
+    display: inline-block;
+    flex-shrink: 0;
+    white-space: nowrap;
+    visibility: visible;
+}
+</style>
     </style>
 </head>
 
