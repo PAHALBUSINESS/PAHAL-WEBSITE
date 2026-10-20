@@ -370,6 +370,7 @@ main > p {
    
 }
     
+
 /* PAHAL NAVBAR — MATCH INDEX PAGE */
 header {
     box-sizing: border-box;
@@ -393,7 +394,8 @@ header nav {
     min-width: 0;
     align-items: center;
     justify-content: flex-end;
-    gap: 12px;
+    gap: 16px !important;
+    width: auto;
 }
 
 header nav a {
@@ -401,10 +403,10 @@ header nav a {
     flex-shrink: 0;
     white-space: nowrap;
     visibility: visible;
-    font-size: 15px;
+    font-size: 15px !important;
+    padding: 0;
 }
 
-/* Keep mobile layout usable */
 @media (max-width: 768px) {
     header {
         height: auto;
@@ -418,14 +420,15 @@ header nav a {
     }
 
     header nav {
-        gap: 8px;
+        width: auto;
+        gap: 8px !important;
     }
 
     header nav a {
-        font-size: 13px;
+        font-size: 13px !important;
     }
 }
-
+    
 </style>
     
 </head>
