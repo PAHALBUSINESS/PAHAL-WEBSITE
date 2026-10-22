@@ -293,30 +293,30 @@ nav a:hover {
 
 } /* CLOSE FINAL MOBILE FIX */
 
+
 /* LIGHTING HERO MOBILE FIX */
 @media (max-width: 600px) {
-
     .lighting-hero {
         width: 100% !important;
-        height: auto !important;
-        min-height: 0 !important;
+        height: 220px !important;
+        min-height: 220px !important;
         padding: 0 !important;
         margin: 0 !important;
         overflow: hidden !important;
+
+        background-image: url("pahal-lighting-earth-clean.png") !important;
+        background-size: 115% auto !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
     }
 
     .lighting-hero img {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        min-height: 0 !important;
-        object-fit: contain !important;
-        margin: 0 !important;
-        padding: 0 !important;
+        display: none !important;
     }
 }
-        @media (max-width: 768px) {
+
+/* MOBILE NAVBAR */
+@media (max-width: 768px) {
     header {
         padding: 10px 12px;
     }
@@ -334,45 +334,27 @@ nav a:hover {
         width: 100%;
     }
 
-      nav a {
+    nav a {
         font-size: 13px;
         white-space: nowrap;
         padding: 2px 0;
     }
 }
-  @media (max-width: 768px) {
 
-    .lighting-hero {
-        background-image: url("pahal-lighting-earth-clean.png") !important;
-        background-size: 115% auto !important;
-        background-position: center center !important;
-        background-repeat: no-repeat !important;
-
-       height: 220px !important;
-       min-height: 220px !important;
-        padding: 0 !important;
+/* MOBILE HEADING AND TEXT */
+@media (max-width: 768px) {
+    main > h2 {
+        font-size: 38px !important;
+        line-height: 1.15 !important;
+        margin-bottom: 20px !important;
     }
 
-    .lighting-hero img {
-        display: none !important;
+    main > p {
+        font-size: 17px !important;
+        line-height: 1.6 !important;
+        margin-bottom: 40px !important;
     }
 }
-        @media (max-width: 768px) {
-
- main > h2 {
-    font-size: 38px !important;
-    line-height: 1.15 !important;
-    margin-bottom: 20px !important;
-}
-
-main > p {
-    font-size: 17px !important;
-    line-height: 1.6 !important;
-    margin-bottom: 40px !important;
-  }
-   
-}
-    
 
 
 /* PAHAL NAVBAR FINAL FIX */
