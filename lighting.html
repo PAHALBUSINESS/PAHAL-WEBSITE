@@ -1,621 +1,511 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Baba Light House, Gurugram | Chandeliers & Fancy Lights – PAHAL</title>
-    <meta name="description" content="Explore chandeliers, fancy lights, ceiling lights and wall lights at Baba Light House, Sector 104, Gurugram, Haryana. View lighting categories and contact us for enquiries." />
-   <meta property="og:title" content="Baba Light House, Gurugram | PAHAL" />
-<meta property="og:description" content="Explore chandeliers, fancy lights, ceiling lights and wall lights at Baba Light House, Sector 104, Gurugram, Haryana." />
-<meta property="og:type" content="website" />
-    <meta property="og:image" content="https://pahalbusiness.github.io/PAHAL-WEBSITE/pahal-earth-hero-bg.png.png" />
+    <title>Baba Light House, Gurugram | Chandeliers & Fancy Lights – PAHAL</title>
+    <meta name="description" content="Explore chandeliers, fancy lights, ceiling lights and wall lights at Baba Light House, Sector 104, Gurugram, Haryana. View lighting categories and contact us for enquiries.">
+    <meta property="og:title" content="Baba Light House, Gurugram | PAHAL">
+    <meta property="og:description" content="Explore chandeliers, fancy lights, ceiling lights and wall lights at Baba Light House, Sector 104, Gurugram, Haryana.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pahalbusiness.github.io/PAHAL-WEBSITE/pahal-earth-hero-bg.png.png">
+
     <style>
-    body {
-        margin: 0;
-        background: #0b0b0b;
-        color: #ffffff;
-        font-family: Arial, sans-serif;
-    }
+        * {
+            box-sizing: border-box;
+        }
 
-    header {
-        padding: 35px 8%;
-        border-bottom: 1px solid #292929;
-    }
+        body {
+            margin: 0;
+            background: #0b0b0b;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
 
-    header h1 {
-        margin: 0;
-        font-size: 42px;
-        letter-spacing: 2px;
-    }
+        header {
+            width: 100%;
+            height: 92px;
+            padding: 12px 3%;
+            border-bottom: 1px solid #292929;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
 
-    header p {
-        margin-top: 8px;
-        color: #d4af37;
-        font-size: 16px;
-    }
-
-    main {
-      padding: 0 8%;
-    }
-
-    main h2 {
-        font-size: 42px;
-        margin-bottom: 20px;
-    }
-
-    main p {
-        color: #bdbdbd;
-        font-size: 18px;
-        max-width: 750px;
-        line-height: 1.7;
-    }
-        .logo-image {
-    height: 58px;
-    width: auto;
-    display: block;
-}
-
-header {
-    padding: 18px 8%;
-    border-bottom: 1px solid #292929;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-nav {
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    transition: 0.3s ease;
-}
-
-nav a:hover {
-    color: #d4af37;
-}
-        .logo-image {
-   height: 75px !important;
-    width: auto !important;
-    object-fit: contain;
-    display: block;
-}
         .logo {
-    display: flex;
-    align-items: center;
-    height: 58px;
-}
-        
-.business-info {
-    margin: 40px 0 35px;
-    padding: 40px;
-    background: linear-gradient(145deg, #151515, #0d0d0d);
-    border: 1px solid #292929;
-}
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
 
-.business-info h2 {
-    color: #d4af37;
-    font-size: 34px;
-    margin-bottom: 12px;
-}
+        .logo-image {
+            height: 62px;
+            width: auto;
+            display: block;
+            object-fit: contain;
+        }
 
-.business-info > p {
-    color: #bdbdbd;
-    font-size: 18px;
-    margin-bottom: 35px;
-}
+        header nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 16px;
+        }
 
-.business-details {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+            white-space: nowrap;
+            transition: color 0.3s ease;
+        }
 
-.info-box {
-    padding: 25px;
-    background: #101010;
-    border: 1px solid #292929;
-}
+        header nav a:hover {
+            color: #d4af37;
+        }
 
-.info-box h3 {
-    color: #d4af37;
-    margin: 0 0 12px;
-    font-size: 20px;
-}
+        /* LIGHTING HERO */
+        .lighting-hero {
+            position: relative;
+            min-height: 480px;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 60px 5%;
+            background-image:
+                linear-gradient(90deg, rgba(0,0,0,0.96) 0%, rgba(0,0,0,0.82) 38%, rgba(0,0,0,0.15) 100%),
+                url("pahal-lighting-showroom-bg.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
 
-.info-box p {
-    color: #bdbdbd;
-    margin: 0;
-    line-height: 1.6;
-    font-size: 15px;
-}
+        .lighting-hero-content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 680px;
+        }
+
+        .lighting-eyebrow {
+            display: inline-block;
+            color: #d4af37;
+            letter-spacing: 5px;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .lighting-hero h1 {
+            color: #f5d889;
+            font-family: Georgia, serif;
+            font-size: clamp(38px, 4.2vw, 64px);
+            line-height: 1.08;
+            margin: 0 0 22px;
+        }
+
+        .lighting-hero-content p {
+            color: #e0e0e0;
+            font-size: 18px;
+            line-height: 1.7;
+            margin: 0 0 28px;
+            max-width: 620px;
+        }
+
+        .lighting-hero-button {
+            display: inline-block;
+            color: #d4af37;
+            border: 1px solid #d4af37;
+            padding: 14px 22px;
+            text-decoration: none;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-size: 13px;
+            transition: 0.3s ease;
+        }
+
+        .lighting-hero-button:hover {
+            background: #d4af37;
+            color: #080808;
+        }
+
+        /* BABA LIGHT HOUSE INFORMATION */
+        .business-info {
+            margin: 20px 0 35px;
+            padding: 30px 40px 40px;
+            background: linear-gradient(145deg, #151515, #0d0d0d);
+            border: 1px solid #292929;
+        }
+
+        .business-info h2 {
+            color: #d4af37;
+            font-size: 34px;
+            margin: 0 0 12px;
+        }
+
+        .business-info > p {
+            color: #bdbdbd;
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 0 0 35px;
+        }
+
+        .business-details {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .info-box {
+            min-width: 0;
+            padding: 25px;
+            background: #101010;
+            border: 1px solid #292929;
+        }
+
+        .info-box h3 {
+            color: #d4af37;
+            margin: 0 0 12px;
+            font-size: 20px;
+        }
+
+        .info-box p {
+            color: #bdbdbd;
+            margin: 0;
+            line-height: 1.6;
+            font-size: 15px;
+            overflow-wrap: anywhere;
+        }
+
+        .info-box a {
+            color: #4285f4;
+            text-decoration: none;
+        }
+
+        /* LIGHTING CATEGORIES */
         .lighting-categories {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    margin-top: 50px;
-}
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+            margin-top: 35px;
+        }
 
-.category-card {
-    padding: 35px;
-    background: linear-gradient(145deg, #151515, #0d0d0d);
-    border: 1px solid #292929;
-    transition: 0.3s ease;
-}
-   .info-box a {
-   color: #4285f4;
-    text-decoration: none;
-    display: block;
-}
-.category-card:hover {
-    transform: translateY(-6px);
-    border-color: #d4af37;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-}
+        .category-card {
+            display: block;
+            min-width: 0;
+            padding: 35px;
+            background: linear-gradient(145deg, #151515, #0d0d0d);
+            border: 1px solid #292929;
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
 
-.category-card h3 {
-    margin: 0 0 15px;
-    color: #d4af37;
-    font-size: 28px;
-}
+        .category-card:hover {
+            transform: translateY(-6px);
+            border-color: #d4af37;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
 
-.category-card p {
-    margin: 0;
-    color: #bdbdbd;
-    font-size: 17px;
-    line-height: 1.6;
-}
-        /* Remove underline from lighting category links */
-.lighting-categories a.category-card,
-.lighting-categories a.category-card:link,
-.lighting-categories a.category-card:visited,
-.lighting-categories a.category-card:hover,
-.lighting-categories a.category-card:active {
-    text-decoration: none !important;
-}
         .category-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-        /* FINAL MOBILE FIX - LIGHTING PAGE */
-@media (max-width: 600px) {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
 
-    html,
-    body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
-    }
+        .category-card h3 {
+            margin: 0 0 15px;
+            color: #d4af37;
+            font-size: 28px;
+        }
 
-    .business-info {
-        width: 100%;
-        box-sizing: border-box;
-    }
+        .category-card p {
+            margin: 0;
+            color: #bdbdbd;
+            font-size: 17px;
+            line-height: 1.6;
+        }
 
-    .business-info > p {
-        font-size: 16px;
-        line-height: 1.6;
-        margin-bottom: 25px;
-    }
+        /* PAHAL GROUP BOTTOM BANNER */
+        .pahal-footer-banner {
+            width: 100%;
+            margin: 50px 0 0;
+            padding: 0;
+            background: #000;
+            overflow: hidden;
+        }
 
-    /* 4 information boxes -> 1 column */
-    .business-details {
-        display: grid !important;
-        grid-template-columns: 1fr !important;
-        gap: 18px;
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-    }
+        .pahal-footer-banner img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            object-fit: contain;
+        }
 
-    .info-box {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        box-sizing: border-box;
-        padding: 22px;
-    }
+        /* TABLET AND MOBILE */
+        @media (max-width: 768px) {
+            header {
+                height: auto;
+                min-height: 78px;
+                padding: 10px 12px;
+                gap: 10px;
+            }
 
-    .info-box h3 {
-        font-size: 19px;
-    }
+            .logo-image {
+                height: 50px;
+            }
 
-    .info-box p {
-        font-size: 15px;
-        line-height: 1.6;
-        overflow-wrap: anywhere;
-        word-break: normal;
-    }
+            header nav {
+                gap: 8px;
+            }
 
-    /* Lighting categories -> 1 column */
- /* Mobile Lighting Categories */
-.lighting-categories {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 20px;
-    margin-top: 35px;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-}
+            header nav a {
+                font-size: 13px;
+            }
 
-.category-card {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 28px 24px;
-    background: linear-gradient(145deg, #151515, #0d0d0d);
-    border: 1px solid #292929;
-    color: #ffffff;
-    text-decoration: none !important;
-}
+            .business-details {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
 
-.category-card h3 {
-    color: #d4af37;
-}
+            .business-info {
+                padding: 28px 24px;
+            }
 
-.category-card p {
-    color: #ffffff;
-}
-    .category-card {
-    text-decoration: none !important;
-    color: inherit;
-}
+            .info-box {
+                padding: 20px;
+            }
+        }
 
-.category-card h3,
-.category-card p {
-    text-decoration: none !important;
-}
+        @media (max-width: 600px) {
+            html,
+            body {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
 
-.category-card:visited {
-    color: inherit;
-}
+            header {
+                align-items: center;
+                padding: 10px 12px;
+            }
 
-} /* CLOSE FINAL MOBILE FIX */
+            .logo-image {
+                height: 44px;
+            }
 
+            header nav {
+                gap: 7px;
+                flex-wrap: nowrap;
+            }
 
-/* MOBILE NAVBAR */
-@media (max-width: 768px) {
-    header {
-        padding: 10px 12px;
-    }
+            header nav a {
+                font-size: 11px;
+                white-space: nowrap;
+            }
 
-    header .logo-image {
-        width: 85px;
-        height: auto;
-    }
+            .lighting-hero {
+                min-height: 470px;
+                padding: 42px 22px;
+                background-position: 58% center;
+            }
 
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 8px;
-        width: 100%;
-    }
+            .lighting-hero-content {
+                max-width: 100%;
+            }
 
-    nav a {
-        font-size: 13px;
-        white-space: nowrap;
-        padding: 2px 0;
-    }
-}
+            .lighting-eyebrow {
+                font-size: 11px;
+                letter-spacing: 3px;
+            }
 
-/* MOBILE HEADING AND TEXT */
-@media (max-width: 768px) {
-    main > h2 {
-        font-size: 38px !important;
-        line-height: 1.15 !important;
-        margin-bottom: 20px !important;
-    }
+            .lighting-hero h1 {
+                font-size: 38px;
+            }
 
-    main > p {
-        font-size: 17px !important;
-        line-height: 1.6 !important;
-        margin-bottom: 40px !important;
-    }
-}
+            .lighting-hero-content p {
+                font-size: 16px;
+                line-height: 1.6;
+            }
 
+            .business-info {
+                width: 100%;
+                margin: 15px 0 25px;
+                padding: 24px 18px;
+            }
 
-/* PAHAL NAVBAR FINAL FIX */
-header {
-    box-sizing: border-box;
-    width: 100%;
-    height: 92px;
-    padding: 12px 3%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-}
+            .business-info h2 {
+                font-size: 29px;
+            }
 
-header .logo-image {
-    height: 62px !important;
-    width: auto !important;
-}
+            .business-info > p {
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 25px;
+            }
 
-header nav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 16px !important;
-    width: auto;
-    min-width: 0;
-    flex: 0 1 auto;
-}
+            .business-details {
+                grid-template-columns: 1fr;
+                gap: 18px;
+                width: 100%;
+            }
 
-header nav a {
-    font-size: 15px !important;
-    white-space: nowrap;
-    flex-shrink: 0;
-    padding: 0;
-}
+            .info-box {
+                width: 100%;
+                padding: 22px;
+            }
 
-@media (max-width: 768px) {
-    header {
-        height: auto;
-        min-height: 78px;
-        padding: 10px 12px;
-    }
+            .info-box h3 {
+                font-size: 19px;
+            }
 
-    header .logo-image {
-        height: 50px !important;
-    }
+            .info-box p {
+                font-size: 15px;
+                line-height: 1.6;
+            }
 
-    header nav {
-        gap: 8px !important;
-    }
+            .lighting-categories {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                margin-top: 30px;
+            }
 
-    header nav a {
-        font-size: 13px !important;
-    }
-}
-        /* PAHAL LIGHTING HERO DESIGN */
-.lighting-hero {
-    position: relative;
-    min-height: 480px;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 60px 5%;
-    background-image:
-        linear-gradient(90deg, rgba(0,0,0,0.96) 0%, rgba(0,0,0,0.82) 38%, rgba(0,0,0,0.15) 100%),
-        url("pahal-lighting-showroom-bg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+            .category-card {
+                padding: 25px 20px;
+            }
 
-.lighting-hero-content {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    max-width: 680px;
-}
+            .category-card h3 {
+                font-size: 25px;
+            }
 
-.lighting-eyebrow {
-    display: inline-block;
-    color: #d4af37;
-    letter-spacing: 5px;
-    font-size: 14px;
-    margin-bottom: 18px;
-}
+            .category-card p {
+                font-size: 16px;
+            }
 
-.lighting-hero h1 {
-    color: #f5d889;
-    font-family: Georgia, serif;
-    font-size: clamp(38px, 4.2vw, 64px);
-    line-height: 1.08;
-    margin: 0 0 22px;
-}
+            .category-card img {
+                height: 200px;
+            }
 
-.lighting-hero-content p {
-    color: #e0e0e0;
-    font-size: 18px;
-    line-height: 1.7;
-    margin: 0 0 28px;
-    max-width: 620px;
-}
-
-.lighting-hero-button {
-    display: inline-block;
-    color: #d4af37;
-    border: 1px solid #d4af37;
-    padding: 14px 22px;
-    text-decoration: none;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-size: 13px;
-    transition: 0.3s ease;
-}
-
-.lighting-hero-button:hover {
-    background: #d4af37;
-    color: #080808;
-}
-
-@media (max-width: 600px) {
-    .lighting-hero {
-        min-height: 470px;
-        padding: 42px 22px;
-        background-position: 58% center;
-    }
-
-    .lighting-hero-content {
-        max-width: 100%;
-    }
-
-    .lighting-eyebrow {
-        font-size: 11px;
-        letter-spacing: 3px;
-    }
-
-    .lighting-hero h1 {
-        font-size: 38px;
-    }
-
-    .lighting-hero-content p {
-        font-size: 16px;
-        line-height: 1.6;
-    }
-}
-
-/* PAHAL GROUP bottom brand banner */
-.pahal-footer-banner {
-    width: 100%;
-    margin: 50px 0 0;
-    padding: 0;
-    background: #000;
-    overflow: hidden;
-}
-
-.pahal-footer-banner img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    object-fit: contain;
-}
-
-@media (max-width: 600px) {
-    .pahal-footer-banner {
-        margin-top: 30px;
-    }
-}
-
-</style>
-    
+            .pahal-footer-banner {
+                margin-top: 30px;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="./pahal-header-logo.png" alt="PAHAL" class="logo-image">
+            </a>
+        </div>
 
-   <header>
-    <div class="logo">
-        <a href="index.html">
-    <img src="./pahal-header-logo.png" alt="PAHAL" class="logo-image">
-        </a>
-    </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#businesses">Businesses</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#vision">Vision</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="index.html#businesses">Businesses</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#vision">Vision</a>
-    <a href="index.html#contact">Contact</a>
-</nav>
+    <section class="lighting-hero">
+        <div class="lighting-hero-content">
+            <span class="lighting-eyebrow">BABA LIGHT HOUSE</span>
 
- </header>
+            <h1>Lighting Showroom in Gurugram, Haryana</h1>
 
-<section class="lighting-hero">
-    <div class="lighting-hero-content">
-        <span class="lighting-eyebrow">BABA LIGHT HOUSE</span>
+            <p>
+                Discover chandeliers, fancy lights, modern ceiling lights
+                and decorative wall lights at Baba Light House, Sector 104,
+                Gurugram. Explore lighting options for homes, offices
+                and premium interiors.
+            </p>
 
-        <h1>Lighting Showroom in Gurugram, Haryana</h1>
+            <a href="#lighting-collection" class="lighting-hero-button">
+                Explore Collection <span>↓</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="business-info">
+        <h2>Baba Light House</h2>
 
         <p>
-            Discover chandeliers, fancy lights, modern ceiling lights
-            and decorative wall lights at Baba Light House, Sector 104,
-            Gurugram. Explore lighting options for homes, offices
-            and premium interiors.
+            Complete lighting solutions for homes, offices and premium spaces.
         </p>
 
-        <a href="#lighting-collection" class="lighting-hero-button">
-            Explore Collection <span>↓</span>
+        <div class="business-details">
+            <div class="info-box">
+                <h3>Location</h3>
+                <p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Baba+Light+House+Dhanwapur+Road+Sector+104+Gurugram+Haryana+122006" target="_blank" rel="noopener noreferrer">
+                        Dhanwapur Rd, opposite Samsung Service Center,<br>
+                        Tech Chand Nagar, Sector 104,<br>
+                        Gurugram, Haryana 122006
+                    </a>
+                </p>
+            </div>
+
+            <div class="info-box">
+                <h3>Contact</h3>
+                <p>
+                    <a href="https://wa.me/919653523595">096535 23595</a><br>
+                    Click to WhatsApp<br><br>
+                    <a href="tel:+919653523595">Call Now</a><br>
+                    Click to Call
+                </p>
+            </div>
+
+            <div class="info-box">
+                <h3>Opening Hours</h3>
+                <p>Monday – Sunday<br>10:30 AM – 08:30 PM</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Google Rating</h3>
+                <p>★★★★★ 5.0<br>17 Google Reviews</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="lighting-categories" id="lighting-collection">
+        <a href="chandeliers.html" class="category-card">
+            <img src="chandeliers.png" alt="Chandeliers for homes and premium interiors at Baba Light House, Gurugram">
+            <h3>Chandeliers</h3>
+            <p>Elegant chandeliers for homes, halls and premium spaces.</p>
+        </a>
+
+        <a href="fancy-lights.html" class="category-card">
+            <img src="fancy-lights.png" alt="Decorative fancy lights at Baba Light House, Gurugram">
+            <h3>Fancy Lights</h3>
+            <p>Stylish and decorative lights to enhance your interiors.</p>
+        </a>
+
+        <a href="ceiling-lights.html" class="category-card">
+            <img src="ceiling-lights.png" alt="Modern ceiling lights at Baba Light House, Gurugram">
+            <h3>Ceiling Lights</h3>
+            <p>Modern ceiling lighting solutions for every space.</p>
+        </a>
+
+        <a href="wall-lights.html" class="category-card">
+            <img src="wall-lights.png" alt="Decorative wall lights at Baba Light House, Gurugram">
+            <h3>Wall Lights</h3>
+            <p>Beautiful wall lighting for a premium finishing touch.</p>
         </a>
     </div>
-</section>
 
-       <section class="business-info">
-
-    <h2>Baba Light House</h2>
-
-    <p>
-        Complete lighting solutions for homes, offices and premium spaces.
-    </p>
-
-    <div class="business-details">
-
-        <div class="info-box">
-            <h3>Location</h3>
-           <p>
-    <a href="https://www.google.com/maps/search/?api=1&query=Baba+Light+House+Dhanwapur+Road+Sector+104+Gurugram+Haryana+122006" target="_blank">
-        Dhanwapur Rd, opposite Samsung Service Center,<br>
-        Tech Chand Nagar, Sector 104,<br>
-        Gurugram, Haryana 122006
-    </a>
-</p>
-</div>
-
-        <div class="info-box">
-            <h3>Contact</h3>
-    <p>
-    <a href="https://wa.me/919653523595">096535 23595</a><br>
-    Click to WhatsApp
-    <br><br>
-    <a href="tel:+919653523595">Call Now</a><br>
-    Click to Call
-</p>
-        </div>
-
-        <div class="info-box">
-            <h3>Opening Hours</h3>
-            <p>Monday – Sunday<br>
-           10:30 AM – 08:30 PM
-        </div>
-
-        <div class="info-box">
-            <h3>Google Rating</h3>
-            <p>★★★★★ 5.0<br>
-            17 Google Reviews</p>
-        </div>
-
-    </div>
-
-</section>
-
-  <div class="lighting-categories">
-
-   <a href="chandeliers.html" class="category-card">
-   <img src="chandeliers.png" alt="Chandeliers for homes and premium interiors at Baba Light House, Gurugram">
-    <h3>Chandeliers</h3>
-    <p>Elegant chandeliers for homes, halls and premium spaces.</p>
-</a>
-
-  <a href="fancy-lights.html" class="category-card">
-  <img src="fancy-lights.png" alt="Decorative fancy lights at Baba Light House, Gurugram">
-    <h3>Fancy Lights</h3>
-    <p>Stylish and decorative lights to enhance your interiors.</p>
-</a>
-      
-   <a href="ceiling-lights.html" class="category-card">
-  <img src="ceiling-lights.png" alt="Modern ceiling lights at Baba Light House, Gurugram">
-    <h3>Ceiling Lights</h3>
-    <p>Modern ceiling lighting solutions for every space.</p>
-</a>
-
-    <a href="wall-lights.html" class="category-card">
-   <img src="wall-lights.png" alt="Decorative wall lights at Baba Light House, Gurugram">
-    <h3>Wall Lights</h3>
-    <p>Beautiful wall lighting for a premium finishing touch.</p>
-</a>
-
-</div>
-
-    </div>
-       
-<section class="pahal-footer-banner">
-    <img
-        src="pahal-group-footer-banner.png"
-        alt="PAHAL GROUP — Baba Light House is a proud part of PAHAL GROUP"
-        loading="lazy"
-    >
-</section>
-
-</main>
+    <section class="pahal-footer-banner">
+        <img
+            src="pahal-group-footer-banner.png"
+            alt="PAHAL GROUP — Baba Light House is a proud part of PAHAL GROUP"
+            loading="lazy"
+        >
+    </section>
+</body>
+</html>
