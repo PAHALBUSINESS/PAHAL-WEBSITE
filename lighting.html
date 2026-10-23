@@ -471,6 +471,71 @@
     display: inline-block;
     margin-bottom: 5px;
 }
+        
+/* EXACT BUSINESS CARDS LOOK */
+.business-info {
+    margin: 12px 0 30px;
+    padding: 28px 40px 35px;
+}
+
+.business-details {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 29px;
+}
+
+.business-info .info-box {
+    min-height: 370px;
+    padding: 34px 36px;
+    background: #101010;
+    border: 1px solid #292929;
+}
+
+.business-info .info-box h3 {
+    color: #d4af37;
+    font-size: 28px;
+    margin: 0 0 18px;
+}
+
+.business-info .info-box p {
+    color: #d0d0d0;
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+.business-info .info-box a {
+    color: #3478ff;
+    text-decoration: none;
+}
+
+.business-info .info-box a:hover {
+    text-decoration: underline;
+}
+
+/* MOBILE CARDS */
+@media (max-width: 600px) {
+    .business-info {
+        padding: 23px 17px;
+    }
+
+    .business-details {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .business-info .info-box {
+        min-height: auto;
+        padding: 22px 20px;
+    }
+
+    .business-info .info-box h3 {
+        font-size: 22px;
+    }
+
+    .business-info .info-box p {
+        font-size: 16px;
+    }
+}
 
     </style>
 </head>
