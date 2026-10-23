@@ -537,6 +537,36 @@
     }
 }
 
+/* BUSINESS CARDS — SIZE CORRECTION */
+.business-info .info-box {
+    padding: 34px 32px !important;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.business-info .info-box h3 {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 18px !important;
+}
+
+.business-info .info-box p {
+    font-size: 22px !important;
+    line-height: 1.6 !important;
+    overflow-wrap: break-word;
+}
+
+/* Keep opening hours on the intended lines */
+.business-info .info-box:nth-child(3) p {
+    white-space: normal;
+}
+
+@media (min-width: 1200px) {
+    .business-info .info-box p {
+        font-size: 22px !important;
+    }
+}
+
     </style>
 </head>
 
