@@ -167,42 +167,72 @@
             margin: 0 0 28px;
         }
 
-        .business-details {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 18px;
-        }
+       
+.business-details {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 29px;
+}
 
-        .info-box {
-            min-width: 0;
-            padding: 23px 21px;
-            background: #101010;
-            border: 1px solid #292929;
-            overflow-wrap: anywhere;
-        }
+.info-box {
+    min-width: 0;
+    box-sizing: border-box;
+    min-height: 370px;
+    padding: 34px 32px;
+    background: #101010;
+    border: 1px solid #292929;
+    overflow-wrap: normal;
+    word-break: normal;
+}
 
-        .info-box h3 {
-            color: #d4af37;
-            margin: 0 0 12px;
-            font-size: 20px;
-            line-height: 1.3;
-        }
+.info-box h3 {
+    color: #d4af37;
+    margin: 0 0 18px;
+    font-size: 28px;
+    line-height: 1.3;
+}
 
-        .info-box p {
-            color: #bdbdbd;
-            margin: 0;
-            line-height: 1.65;
-            font-size: 15px;
-        }
+.info-box p {
+    color: #d0d0d0;
+    margin: 0 0 18px;
+    line-height: 1.6;
+    font-size: 22px;
+}
 
-        .info-box a {
-            color: #d4af37;
-            text-decoration: none;
-        }
+.info-box a {
+    color: #3478ff;
+    text-decoration: none;
+}
 
-        .info-box a:hover {
-            text-decoration: underline;
-        }
+.info-box a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .business-details {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .info-box {
+        min-height: auto;
+        padding: 22px 18px;
+    }
+
+    .info-box h3 {
+        font-size: 22px;
+    }
+
+    .info-box p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .business-details {
+        grid-template-columns: 1fr;
+    }
+}
 
         /* LIGHTING CATEGORIES */
         .lighting-categories {
