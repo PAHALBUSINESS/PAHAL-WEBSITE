@@ -598,6 +598,37 @@
     }
 }
 
+/* FIX: REMOVE EXCESS SPACE FROM MOBILE INFO CARDS */
+@media (max-width: 768px) {
+    .business-info .business-details {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 14px !important;
+    }
+
+    .business-info .info-box {
+        min-height: 0 !important;
+        height: auto !important;
+        padding: 20px 16px !important;
+    }
+
+    .business-info .info-box h3 {
+        font-size: 20px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .business-info .info-box p {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+        margin: 0 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .business-info .business-details {
+        grid-template-columns: 1fr !important;
+    }
+}
+
     </style>
 </head>
 
