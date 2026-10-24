@@ -1047,53 +1047,37 @@ header {
                 display: block;
             }
 
-            nav {
+                     nav#mainNav {
                 position: absolute;
-
                 top: 100%;
                 left: 0;
                 right: 0;
-
                 display: none;
-
                 flex-direction: column;
-
                 align-items: stretch;
-
                 gap: 0;
-
                 padding: 12px 6% 18px;
-
-                background:
-                    rgba(5,5,5,0.98);
-
-                border-bottom:
-                    1px solid rgba(212,175,55,0.20);
-
-                box-shadow:
-                    0 15px 30px rgba(0,0,0,0.45);
+                background: #050505;
+                border-bottom: 1px solid rgba(212,175,55,0.20);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.45);
             }
 
-            nav.active {
+            nav#mainNav.active {
                 display: flex;
             }
 
-            nav a {
+            nav#mainNav a {
                 width: 100%;
-
                 padding: 12px 0;
-
                 font-size: 14px;
-
-                border-bottom:
-                    1px solid rgba(255,255,255,0.06);
+                border-bottom: 1px solid rgba(255,255,255,0.06);
             }
 
-            nav a:last-child {
+            nav#mainNav a:last-child {
                 border-bottom: none;
             }
 
-            nav a::after {
+            nav#mainNav a::after {
                 display: none;
             }
 
@@ -1848,62 +1832,47 @@ header nav a {
          MOBILE MENU SCRIPT
     ========================================================= -->
 
-    <script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.getElementById("menuButton");
+    const mainNav = document.getElementById("mainNav");
 
-        const menuButton =
-            document.getElementById("menuButton");
+    if (!menuButton || !mainNav) return;
 
-        const mainNav =
-            document.getElementById("mainNav");
+    function closeMenu() {
+        mainNav.classList.remove("active");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open navigation");
+        menuButton.textContent = "☰";
+    }
 
+    function toggleMenu() {
+        const isOpen = !mainNav.classList.contains("active");
 
-        menuButton.addEventListener(
-            "click",
-            function () {
-
-                const isOpen =
-                    mainNav.classList.toggle("active");
-
-                menuButton.setAttribute(
-                    "aria-expanded",
-                    isOpen
-                );
-
-                menuButton.textContent =
-                    isOpen ? "×" : "☰";
-
-            }
+        mainNav.classList.toggle("active", isOpen);
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+        menuButton.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation" : "Open navigation"
         );
+        menuButton.textContent = isOpen ? "×" : "☰";
+    }
 
+    closeMenu();
 
-        const navLinks =
-            mainNav.querySelectorAll("a");
+    menuButton.addEventListener("click", toggleMenu);
 
+    mainNav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", closeMenu);
+    });
 
-        navLinks.forEach(
-            function (link) {
-
-                link.addEventListener(
-                    "click",
-                    function () {
-
-                        mainNav.classList.remove("active");
-
-                        menuButton.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
-
-                        menuButton.textContent = "☰";
-
-                    }
-                );
-
-            }
-        );
-
-    </script>
-
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 700) {
+            closeMenu();
+        }
+    });
+});
+</script>
 
 </body>
 </html>
