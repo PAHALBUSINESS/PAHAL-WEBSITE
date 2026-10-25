@@ -1387,6 +1387,47 @@ header nav a {
     white-space: nowrap;
     visibility: visible;
 }
+        /* PAHAL MOBILE HERO FINAL FIX */
+@media (max-width: 700px) {
+    .hero {
+        min-height: 780px;
+        padding: 100px 6% 70px;
+        align-items: flex-start;
+        background: #050505;
+    }
+
+    .hero::before {
+        background-image: url("pahal-earth-hero-bg.png.png");
+        background-position: 65% center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        opacity: 0.85;
+    }
+
+    .hero::after {
+        background: linear-gradient(
+            180deg,
+            rgba(5,5,5,0.65) 0%,
+            rgba(5,5,5,0.42) 40%,
+            rgba(5,5,5,0.25) 70%,
+            rgba(5,5,5,0.18) 100%
+        );
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero {
+        min-height: 780px;
+        padding-top: 85px;
+    }
+}
 </style>
     </style>
 </head>
