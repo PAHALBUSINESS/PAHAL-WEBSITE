@@ -1378,47 +1378,7 @@ header nav a {
     white-space: nowrap;
     visibility: visible;
 }
-        /* PAHAL MOBILE HERO FINAL FIX */
-@media (max-width: 700px) {
-    .hero {
-        min-height: 780px;
-        padding: 100px 6% 70px;
-        align-items: flex-start;
-        background: #050505;
-    }
-
-  .hero::before {
-    background-image: url("pahal-earth-hero-bg.png.png");
-    background-position: center center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.85;
-}
-
-    .hero::after {
-        background: linear-gradient(
-            180deg,
-            rgba(5,5,5,0.65) 0%,
-            rgba(5,5,5,0.42) 40%,
-            rgba(5,5,5,0.25) 70%,
-            rgba(5,5,5,0.18) 100%
-        );
-    }
-
-    .hero-content {
-        position: relative;
-        z-index: 2;
-        width: 100%;
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 380px) {
-    .hero {
-        min-height: 780px;
-        padding-top: 85px;
-    }
-}
+      
         /* ===== PAHAL HERO: DESKTOP + MOBILE FINAL OVERRIDE ===== */
 
 .hero {
@@ -1532,6 +1492,92 @@ header nav a {
 
     .hero::before {
         background-size: auto 70% !important;
+    }
+}
+        /* PAHAL — MOBILE HERO FIX ONLY */
+@media (max-width: 700px) {
+    .hero {
+        position: relative !important;
+        min-height: 0 !important;
+        height: auto !important;
+        padding: 48px 6% 36px !important;
+        display: flex !important;
+        align-items: flex-start !important;
+        background: #050505 !important;
+        isolation: isolate !important;
+        overflow: hidden !important;
+    }
+
+    .hero::before {
+        content: "" !important;
+        position: absolute !important;
+        inset: 0 !important;
+        z-index: 0 !important;
+
+        background-image: url("pahal-earth-mobile.png") !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-size: cover !important;
+
+        opacity: 0.85 !important;
+        transform: none !important;
+    }
+
+    .hero::after {
+        content: "" !important;
+        position: absolute !important;
+        inset: 0 !important;
+        z-index: 1 !important;
+        pointer-events: none !important;
+
+        background: linear-gradient(
+            180deg,
+            rgba(5,5,5,0.48) 0%,
+            rgba(5,5,5,0.30) 45%,
+            rgba(5,5,5,0.18) 75%,
+            rgba(5,5,5,0.38) 100%
+        ) !important;
+    }
+
+    .hero-content {
+        position: relative !important;
+        z-index: 2 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 13vw, 62px) !important;
+        letter-spacing: 6px !important;
+        margin-bottom: 24px !important;
+    }
+
+    .hero h2 {
+        font-size: clamp(25px, 6.8vw, 33px) !important;
+        line-height: 1.22 !important;
+        margin-bottom: 20px !important;
+    }
+
+    .hero p {
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+        margin-bottom: 26px !important;
+    }
+
+    .hero-actions {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 12px !important;
+    }
+
+    .hero-button {
+        display: block !important;
+        width: 100% !important;
+        padding: 14px 12px !important;
+        text-align: center !important;
     }
 }
 </style>
