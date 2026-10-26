@@ -1621,10 +1621,7 @@ header nav a {
         font-size: 13px !important;
     }
 }
-    /* Hide only the two hero buttons */
-.hero .hero-actions {
-    display: none !important;
-}
+   
     /* MOBILE: FIX EARTH HERO BOTTOM */
 @media (max-width: 700px) {
     .hero {
@@ -1638,6 +1635,55 @@ header nav a {
         padding-bottom: 280px !important;
     }
 }
+    
+/* PAHAL — PREMIUM MOBILE HERO BUTTONS */
+@media (max-width: 700px) {
+    .hero .hero-actions {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        gap: 12px !important;
+        margin-top: 30px !important;
+    }
+
+    .hero .hero-button {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative !important;
+        width: 100% !important;
+        min-height: 58px !important;
+        padding: 14px 42px 14px 18px !important;
+        border: 1.5px solid #d4af37 !important;
+        border-radius: 7px !important;
+        background: rgba(5, 5, 5, 0.48) !important;
+        color: #e5bd45 !important;
+        font-size: 17px !important;
+        font-weight: 500 !important;
+        text-align: center !important;
+        text-decoration: none !important;
+        box-shadow: 0 0 14px rgba(212, 175, 55, 0.08) !important;
+        transform: none !important;
+    }
+
+    .hero .hero-button::after {
+        content: "→";
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #e5bd45;
+        font-size: 23px;
+        line-height: 1;
+    }
+
+    .hero .hero-button:hover {
+        background: rgba(212, 175, 55, 0.12) !important;
+        color: #ffffff !important;
+    }
+}
+
 </style>
     </style>
 </head>
