@@ -1419,6 +1419,121 @@ header nav a {
         padding-top: 85px;
     }
 }
+        /* ===== PAHAL HERO: DESKTOP + MOBILE FINAL OVERRIDE ===== */
+
+.hero {
+    position: relative !important;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: calc(100vh - 92px) !important;
+    padding: 70px 6% !important;
+    display: flex;
+    align-items: center !important;
+    background: #050505 !important;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background-image: url("pahal-earth-hero-bg.png.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+
+    opacity: 0.9 !important;
+    transform: none !important;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+
+    background: linear-gradient(
+        90deg,
+        rgba(5,5,5,0.72) 0%,
+        rgba(5,5,5,0.48) 35%,
+        rgba(5,5,5,0.16) 70%,
+        rgba(5,5,5,0.10) 100%
+    ) !important;
+}
+
+.hero-content {
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100%;
+    max-width: 900px;
+}
+
+@media (max-width: 700px) {
+    .hero {
+        min-height: 760px !important;
+        padding: 55px 6% 65px !important;
+        align-items: flex-start !important;
+    }
+
+    .hero::before {
+        background-position: center bottom !important;
+        background-size: auto 78% !important;
+        opacity: 0.9 !important;
+    }
+
+    .hero::after {
+        background: linear-gradient(
+            180deg,
+            rgba(5,5,5,0.18) 0%,
+            rgba(5,5,5,0.08) 40%,
+            rgba(5,5,5,0.18) 75%,
+            rgba(5,5,5,0.32) 100%
+        ) !important;
+    }
+
+    .hero-content {
+        max-width: 100% !important;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 14vw, 65px) !important;
+        letter-spacing: 7px !important;
+        margin-bottom: 26px !important;
+    }
+
+    .hero h2 {
+        font-size: clamp(25px, 7vw, 34px) !important;
+        line-height: 1.2 !important;
+    }
+
+    .hero p {
+        font-size: 15px !important;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 100% !important;
+    }
+
+    .hero-button {
+        width: 100% !important;
+        text-align: center;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero {
+        min-height: 720px !important;
+    }
+
+    .hero::before {
+        background-size: auto 70% !important;
+    }
+}
 </style>
     </style>
 </head>
