@@ -500,10 +500,17 @@ footer::after {
     pointer-events: none;
 }
 
-.footer-container,
-.footer-bottom {
+.footer-container {
     position: relative;
     z-index: 2;
+    display: grid;
+    grid-template-columns: 1.35fr .85fr 1.3fr;
+    gap: 48px;
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    text-align: left;
+    align-items: start;
 }
 
 .footer-about,
