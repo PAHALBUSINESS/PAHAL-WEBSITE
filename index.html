@@ -1854,6 +1854,32 @@ header nav a {
         color: #080808 !important;
     }
 }
+        /* PAHAL MOBILE HERO — FINAL ADJUSTMENTS */
+
+@media (max-width: 700px) {
+
+    /* Identity line in one row */
+    .hero .hero-content .hero-eyebrow {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        white-space: nowrap !important;
+        font-size: 11px !important;
+        letter-spacing: 3px !important;
+        gap: 8px !important;
+        margin-bottom: 16px !important;
+    }
+
+    .hero .hero-content .hero-eyebrow::after {
+        width: 35px !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Move mobile content slightly upward */
+    .hero .hero-content {
+        transform: translateY(70px) !important;
+    }
+}
 </style>
     </style>
 </head>
