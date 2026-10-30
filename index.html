@@ -1766,15 +1766,49 @@ header nav a {
     text-transform: uppercase;
     margin-bottom: 18px;
 }
-    /* PAHAL HERO IDENTITY LINE */
+   /* PAHAL HERO IDENTITY */
 
 .hero .hero-content .hero-eyebrow {
-    color: #d4af37 !important;
-    font-size: 14px !important;
-    font-weight: 600 !important;
-    letter-spacing: 5px !important;
-    text-transform: uppercase !important;
-    margin-bottom: 18px !important;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #e5bd45 !important;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.hero .hero-content .hero-eyebrow::after {
+    content: "";
+    display: block;
+    width: 75px;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        #e5bd45,
+        rgba(229,189,69,0)
+    );
+}
+        /* PAHAL GOLD METALLIC HEADING */
+
+.hero .hero-content h1 {
+    background: linear-gradient(
+        180deg,
+        #fff4bd 0%,
+        #e9c45e 38%,
+        #b88625 65%,
+        #f6dc8b 100%
+    ) !important;
+
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+
+    text-shadow:
+        0 0 12px rgba(212,175,55,0.20),
+        0 0 28px rgba(212,175,55,0.12) !important;
 }
 </style>
     </style>
